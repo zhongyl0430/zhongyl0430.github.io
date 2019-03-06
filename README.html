@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-03-03 Sun 20:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quasi-trees and geodesic trees</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Bonk, Mario; Meyer, Daniel" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Quasi-trees and geodesic trees</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org9850a67">0. Abstract</a></li>
+<li><a href="#org79b09f5">1. Introduction</a>
+<ul>
+<li><a href="#org37978ad">Preliminaries</a></li>
+<li><a href="#orgbd7a554">Tukia-Vaisala theorem</a></li>
+<li><a href="#orgd58a158">Theorem 1.1</a></li>
+<li><a href="#orga1d9caa">Theorem 1.2</a></li>
+<li><a href="#org46e4a09">Organization</a></li>
+<li><a href="#orge0bb5e3">Notation</a></li>
+</ul>
+</li>
+<li><a href="#org820c0c8">2. Auxiliary facts</a></li>
+<li><a href="#org0feaa37">3. Sun and shadow</a></li>
+<li><a href="#org4e58836">4. Good double points</a></li>
+<li><a href="#org0f5d32a">5. Subdividing the tree</a>
+<ul>
+<li><a href="#orgccc6d88">Vertices and tiles</a></li>
+<li><a href="#org20d6d8f">Chains</a></li>
+<li><a href="#orgfc3646e">Choosing \(\delta\)</a></li>
+</ul>
+</li>
+<li><a href="#org37d45ec">6. Weights and main vertices of tiles</a></li>
+<li><a href="#orge32c572">7. Construction of the geodesic metric</a></li>
+<li><a href="#orgc101493">8. Quasisymmetry</a></li>
+<li><a href="#orgf831b23">9. Lowering the Hausdorff dimension</a></li>
+<li><a href="#orgb27a68a">10. Remarks and open problems</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9850a67" class="outline-2">
+<h2 id="org9850a67">0. Abstract</h2>
+<div class="outline-text-2" id="text-org9850a67">
+<p>
+This paper study the quasisymmetric uniformization problem for metric trees. 
+</p>
+</div>
+</div>
+<div id="outline-container-org79b09f5" class="outline-2">
+<h2 id="org79b09f5">1. Introduction</h2>
+<div class="outline-text-2" id="text-org79b09f5">
+</div>
+<div id="outline-container-org37978ad" class="outline-3">
+<h3 id="org37978ad">Preliminaries</h3>
+<div class="outline-text-3" id="text-org37978ad">
+<p>
+An important question in geometric analysis is whether a given metric space is geometrically equivalent to a model space in a natural way. 
+</p>
+
+<ul class="org-ul">
+<li>\((X, d_X)\) and \((Y, d_Y)\): metric spaces</li>
+<li>\(f: X \to Y\) is said to be <b>quasisymmetric</b> if there exists a homeomorphism \(\eta: [0, \infty) \to [0, \infty)\) (playing the role of a control function for distortion) s.t.</li>
+</ul>
+<p>
+\[\frac{d_Y (f(x), f(y))}{d_Y (f(y), f(z))} \leq \eta (\frac{d_X (x, y)}{d_X (y, z)}). \]
+</p>
+<ul class="org-ul">
+<li>Two metric spaces \(X\) and \(Y\) are quasisymmetrically equivalent if there exists a quasisymmetry \(f: X \to Y\).</li>
+<li>Note that bi-Lipschitz is stronger than quasisymmetric. Check that</li>
+</ul>
+<p>
+\[\frac{d_Y (f(x), f(y))}{d_Y (f(x), f(z))} \leq C^2 \frac{d_X (x,y)}{d_X (x,z)}. \]
+</p>
+<ul class="org-ul">
+<li>Quasisymmetric uniformization problem: what conditions when a given metric space \(X\) from a class of spaces is quasisymmetrically equivalent to some model space \(Y\).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbd7a554" class="outline-3">
+<h3 id="orgbd7a554">Tukia-Vaisala theorem</h3>
+<div class="outline-text-3" id="text-orgbd7a554">
+<ul class="org-ul">
+<li><b>metric arc</b> \(J\) : a metric space \(J\) homeomorphic to the unit interval \([0,1]\)</li>
+<li><b>quasi-arc</b>: it is quasisymmetrically equivalent to \([0,1]\)</li>
+<li><b>bounded turning</b>: \((X, d)\) is \(K\) bounded turning if there exists \(K \geq 1\) s.t. for all \(x, y \in X\) there exists a compact connected set \(E \subset X\) containing \(x, y\) s.t. \(\text{diam} (E) \leq K d(x,y)\).</li>
+<li><b>doubling</b>: \((X,d)\) is called doubling if there exists \(N \in \mathbb{N}\) (called the <b>doubling constant</b> of \(X\)) s.t. each ball \(B (R)\) can be covered by \(N\) or fewer balls \(B (R/2)\).</li>
+</ul>
+
+<p>
+<b>Tukia-Vaisala theorem</b>: a metric arc is a quasi-arc iff it is doubling and of bounded turning.
+(In order words, one can "straighten out" such an arc (which may well have Hausdorff dimension \(>1\)) to the interior \([0,1]\) by a quasisymmetry. )
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd58a158" class="outline-3">
+<h3 id="orgd58a158">Theorem 1.1</h3>
+<div class="outline-text-3" id="text-orgd58a158">
+<p>
+This paper study the quasisymmetric uniformization problem for metric tress. 
+</p>
+<ul class="org-ul">
+<li><b>metric tree</b> (sometimes called dendrites): a compact connected and locally connected metric space \((T, d)\) that contains at least two distinct points and there is no closed curve (that is, for any \(x,y \in T\), there is a unique arc connecting \(x\) and \(y\) in \(T\)).</li>
+<li>\([x, y]\) : the arc connecting \(x\) and \(y\) in \(T\)</li>
+<li>an arc \([x,y]\) is <b>degenerate</b> if \(x = y\)</li>
+<li><b>quasi-tree</b> : a tree is doubling and of bounded turning (inspired by T-V theorem)</li>
+</ul>
+
+<p>
+<b>Question</b>: Can all arcs in a quasi-tree be out straightened out simultaneously by a quasisymmetry? 
+</p>
+
+<p>
+<b>Theorem 1.1.</b> Every quasi-tree is quasisymmetrically equivalent to a geodesic tree.
+</p>
+
+<p>
+Idea of theorem 1.1 is defining a geodesic metric \(\varrho\) on \((T, d)\) s.t. the identity map \(\text{id}_T : (T,d) \to (T, \varrho )\) is a quasisymmetry.  
+</p>
+<ol class="org-ol">
+<li>(Section 5) Choose a sequence of decompositions \(\{ X^n \}\) of \(T\) into subtrees.</li>
+<li>(Section 6) Assign a weight \(w(X^n)\) to each \(X^n\).</li>
+<li>(Section 7) Define a distance \(\varrho_n\) on \(T\) w.r.t. \(w(X^n)\).</li>
+<li>(Lemma 7.3) The limit \(\varrho := \lim_n \varrho_n\) exists and (Lemma 7.6) it defines a geodesic metric on \(T\).</li>
+<li>(Proposition 7.7 (i)) \(\text{diam}_{\varrho} (X) \asymp w(X)\).</li>
+<li>The metric \(\varrho\) is a "conformal" deformation of \(d\) on \(T\) controlled by weight \(w(X)\) near each tile \(X\).</li>
+<li>(Lemma 8.2) The map \(\text{id}_T : (T,d) \to (T, \varrho)\) is a quasisymmetry.</li>
+</ol>
+
+<p>
+The main difficulty: how to define the decompositions \(X^n\)?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1d9caa" class="outline-3">
+<h3 id="orga1d9caa">Theorem 1.2</h3>
+<div class="outline-text-3" id="text-orga1d9caa">
+<p>
+<b>Question</b>: How small we can make the quasisymmetric image of a quasi-tree?
+</p>
+
+<p>
+The <b>conformal dimension</b> of a metric space \(X\), denoted by \(\text{confdim} (X)\), is the infimum of all Hausdorff dimensions of metric spaces \(Y\) that are quasisymmetrically equivalent to \(X\). 
+</p>
+
+<p>
+<b>Theorem 1.2.</b> The conformal dimension of a quasi-tree is 1. 
+</p>
+
+<p>
+Idea of theorem 1.2: The construction of \(\varrho\) involves a parameter \(\epsilon_0 > 0\). Show that, if \(\epsilon_0\) close to \(0\), then the Hausdorff dimension of \((T, \varrho)\) is close to \(1\). 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46e4a09" class="outline-3">
+<h3 id="org46e4a09">Organization</h3>
+<div class="outline-text-3" id="text-org46e4a09">
+<ul class="org-ul">
+<li>Section 2: review some basic topological facts about trees.</li>
+<li>Section 3: prove a general fact that is of independent interest: we show that if on an arc some points cast a "shadow" satisfying suitable conditions, then one can always find a "place in the sun".</li>
+<li>Section 4: introduce the concept of a \((\beta, \gamma)\) good double point at scale \(\Delta > 0\).</li>
+<li>Section 5: define the subdivisions of \(T\) into tiles.</li>
+<li>Section 6: define weights of tiles.</li>
+<li>Section 7: define the metric \(\varrho\) and show that it is a geodesic metric.</li>
+<li>Section 9: prove theorem 1.2.</li>
+<li>Section 10: conclude with remarks and open problems.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge0bb5e3" class="outline-3">
+<h3 id="orge0bb5e3">Notation</h3>
+<div class="outline-text-3" id="text-orge0bb5e3">
+<ul class="org-ul">
+<li>\(a \asymp b\): there is a constant \(C \geq 1\) s.t. \(C^{-1} a \leq b \leq C a\).</li>
+<li>\(\mathbb{N}\) and \(\mathbb{N}_0\)</li>
+<li>\(\# X\): the cardinality of a set \(X\).</li>
+<li>open ball \(B_d (a, r) := \{ x \in X : d(a,x) < r \}\) and closed ball \(\bar{B}_d (a, r)\)</li>
+</ul>
+
+<p>
+For \(A, B \subset X\)
+</p>
+<ul class="org-ul">
+<li>\(\text{diam}_d (A)\): diameter of \(A\) w.r.t. \(d\)</li>
+<li>\(\bar{A}\): the closure of \(A\) in \(X\)</li>
+<li>\(\text{int} (A)\): the interior of \(A\) in \(X\)</li>
+<li>\(\text{dist}_d (A, B) := \inf \{ d(x,y): x \in A, y \in B \}\)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org820c0c8" class="outline-2">
+<h2 id="org820c0c8">2. Auxiliary facts</h2>
+<div class="outline-text-2" id="text-org820c0c8">
+<ul class="org-ul">
+<li>\(S \subset X\) is <b>\(s\) separated</b> for some \(s>0\) if \(d(x,y) > s\) for all \(x, y \in S\).</li>
+<li>\(S\) is <b>maximal</b> \(s\) separated set if it is not contained in a strictly larger subset which is also \(s\) separated.</li>
+<li>If \(X\) is compact, then \(s\) separated set is finite.</li>
+<li>The space \((X, d)\) is <b>doubling</b> iff \(\forall \lambda \in (0,1)\), \(\exists N' = N' (\lambda, N)\) where \(N\) is the doubling number of \(X\) s.t. if \(s>0\) and \(S \subset X\) is a \(\lambda s\) separated set contained in a ball \(B(x,s)\) with \(x \in X\), then \(S\) contains at most \(N'\) points.</li>
+<li>It is easy to check that doubling is a bi-Lipschitz invariant property.</li>
+<li>An <b>arc</b> \(J \subset X\): homeomorphic to \([0,1] \subset \mathbb{R}\)</li>
+<li>The <b>endpoints</b> \(\partial J\) of \(J\)</li>
+<li>The <b>interior points</b> of \(J\): \(\text{int} (J) := J \setminus \partial J\)</li>
+</ul>
+
+<p>
+<b>Lemma 2.1.</b> 
+Let \((J, d)\) be an arc and \(n \geq 2\). 
+Then we can decompose \(J\) into \(n\) non-overlapping subacrcs of equal diameter \(\Delta \geq \frac{1}{n} \text{diam}(J)\).
+</p>
+
+<ul class="org-ul">
+<li>A tree \(T\) and two points \(x, y \in T\)</li>
+<li>\([x, y]\): the unique (closed) arc joining \(x\) and \(y\)</li>
+<li>\((x, y]\), \([x, y)\), \((x, y)\)</li>
+<li>A subtree \(X\) of \(T\) if \(X\) equipped with the restriction of \(d\) is also a tree. \(X\) is a subtree of \(T\) iff \(X\) contains at least two points and is closed and connected.</li>
+</ul>
+
+<p>
+<b>Lemma 2.2</b>
+Let \((T,d)\) be a tree and \(V \subset T\) be a finite set. 
+Then the following statements are true:
+</p>
+<ol class="org-ol">
+<li>\(x, y \in T \setminus V\) lie in the same component of \(T \setminus V\) iff \([x, y] \cap V = \emptyset\)</li>
+<li>If \(U\) is component of \(T \setminus V\), then \(U\) is open and \(\bar{U}\) is a subtree of \(T\) with \(\partial \bar{U} \subset \partial U \subset V\).</li>
+<li>If \(U\) and \(W\) are two distinct components of \(T \setminus V\), then \(\bar{U}\) and \(\bar{W}\) have at most one point in common. Such a common point belongs to \(V\), and is a boundary point of both \(\bar{U}\) and \(\bar{W}\).</li>
+</ol>
+
+<p>
+Proof of Lemma 2.2. (Omitted.)
+</p>
+
+<ul class="org-ul">
+<li>\(p \in T\) and \(U\) a component of \(T \setminus \{ p \}\)</li>
+<li>A <b>branch</b> of \(p\) in \(T\) is a subtree \(B := \bar{U} = U \cup \{ p \}\).</li>
+<li>There are only countable many distinct branches \(B\) of \(p\). Only finite of these branches can have a diameter exceeding a given positive number. This is given by Lemma 3.8 of [BT18]. (It needs assumption that \(T\) is compact.)</li>
+</ul>
+<p>
+(Proof: Assume there are infinite \(B_n\) with \(\text{diam} (B_n) > \delta > 0\). Take \(x_n \in B_n\) s.t. \(d(x_i, p) > \delta / 2\). Since \(T\) is compact, there is a acumulation point \(x\) of \(\{ x_n \}_n\). Let \(N\) be the \(\delta / 4\) neighborhood of \(x\). Any \(x_i, x_j \in N\) satisfies \(d ( x_i, p) \geq \delta / 4 > 0\). So \(x_i\) and \(x_j\) are in the same component containing \(N\). However they are in different components. )
+</p>
+<ul class="org-ul">
+<li>It implies that we can label the branches \(B_n\) s.t. \(\text{diam} (B_n) \geq \text{diam} (B_{n+1})\) for all \(n\).</li>
+<li>If \(p\) has precisely two branches, then \(p\) is called <b>double point</b> of \(T\) and the diameter of the smallest branch is denoted by \(D_T (p) := \text{diam} (B_2)\).</li>
+<li>If \(p\) has at least three branches, then \(p\) is called a <b>branch point</b> of \(T\) and the diameter of the third largest branch is denoted by \(H_T (p) := \text{diam} (B_3)\).</li>
+</ul>
+
+<p>
+<b>Lemma 2.3.</b> (A criterion how to detect branch points)
+A tree \((T,d)\) and \(b, x_1, x_2, x_3 \in T\). 
+Arcs \([x_i, b)\) are pairwise disjoint. 
+Then \(x_i\) lie in different components of \(T \setminus \{b\}\) and \(b\) is a branch point of \(T\). 
+</p>
+
+<ul class="org-ul">
+<li>A tree \((T, d)\) is \(K\) bounded turning with \(K \geq 1\) iff \(\text{diam} [x,y] \leq K d(x,y)\). (Take \([x, y]\) as the compact set in the definition. )</li>
+<li>The <b>diameter distance</b> on \(T\) is defined as \(\text{dd} (x,y) := \text{diam} [x,y]\).</li>
+</ul>
+
+<p>
+<b>Lemma 2.4.</b> (Properties of \(dd\))
+</p>
+<ol class="org-ol">
+<li>\(dd\) is a metric on \(T\).</li>
+<li>For each arc \(J \subset T\) we have \(\text{diam}_{dd} (J) = \text{diam} (J)\).</li>
+<li>\((T, dd)\) is of \(1\) bounded turning.</li>
+<li>\((T, d)\) is \(K\) boundaed turning iff \(id_T: (T,d) \to (T, dd)\) is \(K\) bi-Lipschitz.</li>
+</ol>
+
+<p>
+Proof of Lemma 2.4. 
+</p>
+
+<ul class="org-ul">
+<li>A metric \(d\) is called a <b>diameter metric</b> if \(d(x,y) = \text{diam} [x,y]\). Then \(d = dd\).</li>
+</ul>
+
+<p>
+Suppose \((T, d)\) is quasi-tree. Then Lemma 2.4 implies that \((T, dd)\) is bi-Lipschitz equivalent to \((T,d)\). Moreover, \((T, dd)\) is of \(1\) bounded turning. Note that doubling is a bi<sub>Lipschitz</sub> invariant property. So \((T, dd)\) is still a quasi-tree. 
+</p>
+
+<p>
+<b>Assumption</b>: \((T, d)\) carries a diameter metric. 
+</p>
+
+<p>
+<b>Assumption</b>: \(\text{diam} (T) = 1\). 
+(Rescale metric if needed)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0feaa37" class="outline-2">
+<h2 id="org0feaa37">3. Sun and shadow</h2>
+<div class="outline-text-2" id="text-org0feaa37">
+<p>
+In this section we will prove the following proposition, which allow us to find double points in \(T\) that stay away from the branch points of \(T\) in a geometrically controlled manner. 
+</p>
+
+<p>
+<b>Proposition 3.1.</b>
+There exists a constant \(\gamma = \gamma (N) > 0\) with the following property: 
+if \(\Delta > 0\) and \(J \subset T\) is an arc with \(\text{diam} (J) \geq \Delta\), then there exists a double point \(x \in J\) of \(T\) s.t. 
+\[ d(x,b) \geq \gamma \cdot \min \{ H_T(b), \Delta \} \]
+for all branch points \(b \in T\). 
+</p>
+
+<p>
+To prove this proposition, we require two auxiliary facts. 
+</p>
+
+<p>
+<b>Lemma 3.2</b>
+Let \((J.d)\) be a metric arc with a diameter metric \(d\), \(J' \subset J\) and \(A \subset J\) be a set with \(\# (A \cap J') \leq M\). 
+Then there exists an arc \(I \subset J'\) s.t. 
+\[ \text{diam} (I) = \frac{1}{6M} \text{diam} (J')\] 
+and
+\[ \text{dist} (I, A \cup \partial J') \geq \frac{1}{6M} \text{diam} (J). \] 
+</p>
+
+<p>
+<b>Lemma 3.3</b> (Ein Platz an der Sonne)
+Let \(( J, d)\) be a diameter metric arc and \(S: J \to [0, \text{diam} (J)]\) be a function. Suppose there is a constant \(M\) s.t. for all subarcs \(I \subset J\) we have
+\[ \# \{ p \in I : S(p) \geq \text{diam} (I) \} \leq M. \]
+There exists a constant \(\sigma = \sigma(M) > 0\) and a point \(x \in J\) s.t. \(d(x,p) \geq \sigma S(p)\) for all \(p \in J\). 
+</p>
+
+<p>
+In other words, the set \(J \setminus \cup_{p \in J} B(p, \sigma S(p))\) is non-empty. 
+If we think of each point \(p \in J\) with \(S(p) > 0\) as "casting a shadow" of radius \(\sigma S(p)\) around \(p\), then the lemma says that the union of all shadows does not cover \(J\), and so there is a "place in the sun". 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e58836" class="outline-2">
+<h2 id="org4e58836">4. Good double points</h2>
+<div class="outline-text-2" id="text-org4e58836">
+<p>
+In this section we introduce the concept of a "good" double point of \(T\). 
+Attached to this concept are certain numerical parameters. 
+The goal of this section is to show that with appropriate choices of these parameters, one can use a maximal set \(V\) of good double points to obtain a decomposition of \(T\) with some desired geometric properties (see Proposition 4.2). 
+</p>
+
+<p>
+Fix a scale \(0 < \Delta \leq \text{diam} (T) = 1\). 
+</p>
+
+<p>
+Consider double point \(x \in T\) with property that both components of \(T \setminus \{x\}\) are large, that is, 
+</p>
+\begin{equation}
+  \label{eq:LargeComponent}
+  D_T (x) \geq \beta \Delta
+  \tag{4.1}
+\end{equation}
+<p>
+for some constant \(\beta \geq 1\). 
+</p>
+
+<p>
+<b>Proposition 4.1.</b>
+There is a constant \(\beta = \beta(N) \geq 1\) s.t. the following statement is true: 
+if \(V \subset T\) is a set of double points of \(T\) that are \(\Delta\) separated and satisfy \(D_T (x) \geq \beta \Delta\), then either
+</p>
+
+<p>
+i) for each component \(X\) of \(T \setminus V\) we have
+\[ \text{diam} (X) \leq 3 \beta \Delta\]
+</p>
+
+<p>
+ii) there is an arc \(I \subset T\) with
+\[ \text{diam} (I) \geq \Delta \text{ and } \text{dist} (I, V) \geq \Delta\]
+and so that \(D_T(x) \geq \beta \Delta\) for each double point \(x \in I\) of \(T\).
+</p>
+
+<p>
+Proposition 3.1 implies that each arc \(I \subset T\) contains double points of \(T\). 
+So in case 2 of the previous statement, we can add a double point of \(V\) and get a new set of double points which still satisfies the conditions of Proposition 4.1. 
+This implies that for a maximal set in the proposition, statement 1. will always be true. 
+</p>
+
+<p>
+In addition of (4.1), we want to choose double points \(x \in T\) that are separated from the branch points of \(T\) in a controlled way: 
+</p>
+\begin{equation}
+  \label{eq:AwayFromBranch}
+  d(x,b) \geq \gamma \cdot \min \{ H_T(b), \Delta \}
+  \tag{4.2}
+\end{equation}
+<p>
+for all branch points \(b\), where \(\gamma = \gamma(N)\) in Proposition 3.1. 
+A double point \(x \in T\) is called <b>\((\beta, \gamma)\) good</b> at scale \(\Delta\) if it satisfies \eqref{eq:LargeComponent} and \eqref{eq:AwayFromBranch}. 
+</p>
+
+<p>
+<b>Proposition 4.2</b>
+Let \(\beta = \beta (N) \geq 1\) in Proposition 4.1, \(\gamma = \gamma(N) > 0\) in Proposition 3.1 and \(0 < \Delta < 1\). 
+If \(V \subset T\) is a maximal \(\Delta\) separated set of \((\beta, \gamma)\) good double points at scale \(\Delta\), then 
+\[ \text{diam} (X) \leq 3 \beta \Delta \]
+for each component \(X\) of \(T \setminus V\). 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0f5d32a" class="outline-2">
+<h2 id="org0f5d32a">5. Subdividing the tree</h2>
+<div class="outline-text-2" id="text-org0f5d32a">
+<p>
+We want to subdivide our quasi-tree \(T\). 
+As before, assume that \(T\) is equipped with a diameter metric \(d\) and \(\text{diam} (T) = 1\). 
+Fix \(\beta \geq 1\) and \(\gamma > 0\) depending on doubling constant \(N\) of \(T\) and a small constant \(0 < \delta < 1/(3 \beta)\). 
+</p>
+</div>
+<div id="outline-container-orgccc6d88" class="outline-3">
+<h3 id="orgccc6d88">Vertices and tiles</h3>
+<div class="outline-text-3" id="text-orgccc6d88">
+<p>
+We will inductively construct set \(V^n \subset T\) s.t. 
+</p>
+\begin{equation}
+  V^1 \subset V^2 \subset ... 
+  \tag{5.1}
+\end{equation}
+<p>
+where each \(V^n\) is a maximal \(\delta^n\) separated set consisting of \((\beta, \gamma)\) good double points at scale \(\delta^n\). 
+Each set \(V^n\) is finite since \(T\) is compact. 
+</p>
+
+<ul class="org-ul">
+<li>Each point \(v \in V^n\) is called <b>\(n\) vertex</b>.</li>
+<li>The closure of a component of \(T \setminus V^n\) is called an <b>\(n\) tile</b>.</li>
+<li>\(X^n\) : the set of \(n\) tiles.</li>
+</ul>
+
+<p>
+<b>Lemma 5.1</b> (topological properties of vertices and tiles)
+</p>
+<ol class="org-ol">
+<li>Each \(n\) tile \(X\) is a subtree of \(T\) with \(\partial X \subset V^n\).</li>
+<li>For \(X \in X^n\) and \(x \in V^n\), \(X\) is contained in the closure of one of the two components of \(T \setminus \{ v \}\) and disjoint from the other component of \(T \setminus \{v\}\).</li>
+<li>\(\partial X \neq \emptyset\) for \(X \in X^n\).</li>
+<li>\(X \neq Y \in X^n\) have at most one point in common. Such a common point of \(X\) and \(Y\) is an \(n\) vertex and a boundary point of both \(X\) and \(Y\).</li>
+<li>Each \(n\) vertex \(v\) is contained in precisely two distinct \(X, Y \in X^n\).</li>
+<li>\(X^n\) is a finite set.</li>
+<li>Each \(X' \in X^{n+1}\) is contained in a unique \(X \in X^n\).</li>
+<li>Each \(n\) tile \(X = \cup_{\{X' \in X^n : X' \subset X\}} X'\).</li>
+<li>If \(v\) is \(n\) vertex and \(X \in X^n\) containing \(v\), then \(v \in \partial X\). Moreover, there exists precisely one \((n+1)\) tile \(X' \subset X\) containing \(v\).</li>
+<li>If \(X \in X^n\) and \(\partial X = \{v\} \subset V^n\) is a singleton set, then \(X = \bar{W}\) where \(W\) is a component of \(T \setminus \{v\}\).</li>
+</ol>
+
+<p>
+Here are some metric properties of vertices and tiles. 
+For \(X \in X^n\), we have 
+</p>
+<ul class="org-ul">
+<li>\(V^n\) consists of \(\delta^n\) separated points that is</li>
+</ul>
+\begin{equation}
+  d( u, v) \geq \delta^n
+  \tag{5.2}
+\end{equation}
+<p>
+for all \(u, v \in V^n\).  
+</p>
+<ul class="org-ul">
+<li>\(\delta^n\) separated and Proposition 4.2 implies that</li>
+</ul>
+\begin{equation}
+  \delta^n \leq \text{diam} (X) \leq 3 \beta \delta^n. 
+  \tag{5.3}
+\end{equation}
+<ul class="org-ul">
+<li>We have good separation of \(n\) tiles in the following sense. If \(X^n, Y^n \in \mathbf{X}^n\) are disjoint \(n\) tiles, then</li>
+</ul>
+\begin{equation}
+  \text{dist} (X^n, Y^n) \geq \delta^n. 
+  \tag{5.4}
+\end{equation}
+<ul class="org-ul">
+<li>The component of \(T \setminus \{v\}\) are large in the following sense:</li>
+</ul>
+\begin{equation}
+  D_T (v) \geq \beta \delta^n
+  \tag{5.5}
+\end{equation}
+<p>
+since each \(v \in V^n\) is a \((\beta, \gamma)\) good double point at scale \(\delta^n\). 
+</p>
+<ul class="org-ul">
+<li>Each \(n\) vertex \(v\) stays away from the branch points of \(T\) in a controlled way:</li>
+</ul>
+\begin{equation}
+  d(v, b) \geq \gamma \min \{ H_T (b), \delta^n \}
+  \tag{5.6}
+\end{equation}
+<p>
+since (4.2) for each banch point. 
+</p>
+
+<p>
+For convenience, set \(V^0 := \emptyset\) and \(X^0 := T\). 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org20d6d8f" class="outline-3">
+<h3 id="org20d6d8f">Chains</h3>
+<div class="outline-text-3" id="text-org20d6d8f">
+<ul class="org-ul">
+<li><b>\(n\) chain</b> is a sequence \(P\) of \(n\) tiles \(X_1, ..., X_r\) with \(X_i \cap X_{i+1} \neq \emptyset\). And \(r\) is called the <b>length</b> of \(P\).</li>
+<li>\(P\) <b>joins</b> \(x\) and \(y\) if \(x \in X_1\) and \(y \in X_r\).</li>
+<li>\(P\) is <b>simple</b> if \(X_i \cap X_j = \emptyset\) for \(|i-j| \geq 2\). The tiles in a simple chain \(P\) are all distinct.</li>
+<li>\(P\) is a simple \(n\) chain joining \(x\) and \(y\) if &#x2026;</li>
+<li>\(|P| := \cup_{i=1}^r X_i\)</li>
+<li>\(P\) <b>contains</b> \(x\) if \(x \in |P|\)</li>
+<li>\(Q\) is a <b>subchain</b> of \(P\): \(Q\) is obtained by deleting some tiles in \(P\) while keeping the order of the remaining tiles.</li>
+</ul>
+
+<p>
+<b>Lemma 5.2</b>
+</p>
+<ol class="org-ol">
+<li>There exists a unique simple \(n\) chain \(P\) joining \(x\) and \(y\)</li>
+<li>If both \(P\) and \(P'\) joins \(x\) and \(y\) and \(P\) is simple, then \(|P| \subset |P'|\).</li>
+</ol>
+
+<p>
+By 2) of Lemma 5.2, we denote by \(P_{xy}^n\) the unique simple \(n\) chain joining \(x\) and \(y\). 
+</p>
+
+<p>
+<b>Lemma 5.3</b> (construct simple \((n+1)\) chains from simple \(n\) chain)
+Let \(P = (X_1, ..., X_r)\) be a simple \(n\) chain joining \(x\) and \(y\). 
+Let \(v_i\) be the unique vertex in \(X_{i-1} \cap X_i\), \(x_0 =  x\) and \(x_r = y\). 
+Denote by \(P_i'\) the simple \((n+1)\) chain joining \(v_{i-1}\) and \(v_i\). 
+The followings are true:
+</p>
+<ol class="org-ol">
+<li>\(P_i'\) consists of \(X' \in \mathbf{X}^{(n+1)}\) with \(X' \cap [v_{i-1}, v_i] \neq \emptyset\).</li>
+<li>The simple \((n+1)\) chain \(P'\) joining \(x\) and \(y\) is obtained by concatenating \(P_1', ..., P_r'\).</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgfc3646e" class="outline-3">
+<h3 id="orgfc3646e">Choosing \(\delta\)</h3>
+<div class="outline-text-3" id="text-orgfc3646e">
+<p>
+We now choose the parameter \(0 < \delta < 1/(3\beta)\) used in the definition of vertices and tiles so that \((n+1)\) tiles are contained in \(n\) tiles in a "controlled way". 
+</p>
+
+<p>
+<b>Lemma 5.4</b> (number of \((n+1)\) tiles)
+If \(0 < \delta < 1/(3 \beta)\) only depending on \(N\), then the following hold for all \(n\):
+</p>
+<ol class="org-ol">
+<li>Each \(X \in \mathbf{X}^n\) contains at least three \((n+1)\) tiles.</li>
+<li>If \(n\) vertices \(u \neq v\), then the simple \((n+1)\) chain joining \(u\) and \(v\) has length \(\geq 3\).</li>
+</ol>
+
+<p>
+The first statement implies that there are at least three \(1\) tiles. 
+The second statement implies each \((n+1)\) tile \(X'\) contains at most one \(n\) vertex. 
+</p>
+
+<p>
+<b>Lemma 5.5</b> (location of \((n+1)\) vertices)
+Let \(\delta\) in Lemma 5.4. 
+Let \(X\) be an \(n\) tile, \(u \in \partial X \subset V^n\) and \(X' \subset X\) be the unique \((n+1)\) tile containing \(u\). 
+Then there exists an \((n+1)\) vertex \(u' \in \partial X' \setminus \{u\}\) s.t. \([u, u'] \subset [u, v]\) for all \(v \in \partial X \setminus \{u\}\). 
+</p>
+
+<p>
+For the rest of the paper, we fix \(0 < \delta < 1/ (3 \beta)\) s.t. Lemma 5.4 and Lemma 5.5 are true. 
+As we see from the proofs, it is enough to take \(\delta = \frac{1}{2} \min \{ 1/(9\beta), \gamma/(3\beta) \}\). 
+Then \(\delta\) depends only on \(N\). 
+The sets of vertices \(V^n\) and tiles \(X^n\) are fixed from now on since they depend on \(\delta\). 
+</p>
+
+<p>
+<b>Lemma 5.6</b>
+Let \(X\) be an \(n\) tile and \(u \neq v \in \partial X \subset V^n\). 
+Then the simple \((n+1)\) chain \(P_{uv}^{(n+1)}\) joining \(u\) to \(v\) consists precisely of all \((n+1)\) tiles \(X' \subset X\) with \(X' \cap [u, v] \neq \emptyset\). 
+Moreover, \(P_{uv}^{(n+1)}\) does not contain any point \(w \in \partial X\) distinct from \(u\) and \(v\). 
+</p>
+
+<p>
+<b>Lemma 5.7</b> (uniform control for the local combinatorics of tiles)
+There is a constant \(K \in \mathbb{N}\) s.t. the following statements hold for each \(X \in \mathbf{X}^n\):
+</p>
+<ol class="org-ol">
+<li>There are at most \(K\) \(n\) tiles that intersect \(X\).</li>
+<li>There are at most \(K\) \((n+1)\) tiles contained in \(X\).</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org37d45ec" class="outline-2">
+<h2 id="org37d45ec">6. Weights and main vertices of tiles</h2>
+<div class="outline-text-2" id="text-org37d45ec">
+<p>
+We will now define <i>weight</i> of tiles. 
+Later they will be used to construct our desired geodesic metric \(\varrho\). 
+</p>
+
+<ul class="org-ul">
+<li>The <b>\(w\) length</b> of an \(n\) chain \(P = ( X_1, ..., X_r)\) is defined by</li>
+</ul>
+<p>
+\[\text{length}_w (P) := \sum_{i=1}^r w(X_i).\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge32c572" class="outline-2">
+<h2 id="orge32c572">7. Construction of the geodesic metric</h2>
+<div class="outline-text-2" id="text-orge32c572">
+<p>
+Based on weights defined in the previous section, we define a new metric \(\varrho\) on \((T, d)\). 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc101493" class="outline-2">
+<h2 id="orgc101493">8. Quasisymmetry</h2>
+<div class="outline-text-2" id="text-orgc101493">
+<p>
+In this section, we prove Theorem 1.1 by showing that \(( T, d)\) is quasisymmetrically equivalent to \((T, \varrho)\). 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf831b23" class="outline-2">
+<h2 id="orgf831b23">9. Lowering the Hausdorff dimension</h2>
+<div class="outline-text-2" id="text-orgf831b23">
+<p>
+In this section we will prove Theorem 1.2. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb27a68a" class="outline-2">
+<h2 id="orgb27a68a">10. Remarks and open problems</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Bonk, Mario; Meyer, Daniel</p>
+<p class="date">Created: 2019-03-03 Sun 20:29</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
