@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-03-03 Sun 20:29 -->
+<!-- 2019-03-06 Wed 21:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Quasi-trees and geodesic trees</title>
@@ -256,50 +256,51 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9850a67">0. Abstract</a></li>
-<li><a href="#org79b09f5">1. Introduction</a>
+<li><a href="#orgcbd3600">1. Abstract</a></li>
+<li><a href="#org94e792c">2. Introduction</a>
 <ul>
-<li><a href="#org37978ad">Preliminaries</a></li>
-<li><a href="#orgbd7a554">Tukia-Vaisala theorem</a></li>
-<li><a href="#orgd58a158">Theorem 1.1</a></li>
-<li><a href="#orga1d9caa">Theorem 1.2</a></li>
-<li><a href="#org46e4a09">Organization</a></li>
-<li><a href="#orge0bb5e3">Notation</a></li>
+<li><a href="#orgd7cceab">2.1. Preliminaries</a></li>
+<li><a href="#org8d85072">2.2. Tukia-Vaisala theorem</a></li>
+<li><a href="#org862ae3b">2.3. Theorem 1.1</a></li>
+<li><a href="#orgc30d402">2.4. Theorem 1.2</a></li>
+<li><a href="#org3033638">2.5. Organization</a></li>
+<li><a href="#org0bc684c">2.6. Notation</a></li>
 </ul>
 </li>
-<li><a href="#org820c0c8">2. Auxiliary facts</a></li>
-<li><a href="#org0feaa37">3. Sun and shadow</a></li>
-<li><a href="#org4e58836">4. Good double points</a></li>
-<li><a href="#org0f5d32a">5. Subdividing the tree</a>
+<li><a href="#orgab05b4f">3. Auxiliary facts</a></li>
+<li><a href="#org25e3cbd">4. Sun and shadow</a></li>
+<li><a href="#org9e7c5f4">5. Good double points</a></li>
+<li><a href="#org7c0dd1a">6. Subdividing the tree</a>
 <ul>
-<li><a href="#orgccc6d88">Vertices and tiles</a></li>
-<li><a href="#org20d6d8f">Chains</a></li>
-<li><a href="#orgfc3646e">Choosing \(\delta\)</a></li>
+<li><a href="#orgd3209f7">6.1. Vertices and tiles</a></li>
+<li><a href="#orgba2663a">6.2. Chains</a></li>
+<li><a href="#org96ab346">6.3. Choosing \(\delta\)</a></li>
 </ul>
 </li>
-<li><a href="#org37d45ec">6. Weights and main vertices of tiles</a></li>
-<li><a href="#orge32c572">7. Construction of the geodesic metric</a></li>
-<li><a href="#orgc101493">8. Quasisymmetry</a></li>
-<li><a href="#orgf831b23">9. Lowering the Hausdorff dimension</a></li>
-<li><a href="#orgb27a68a">10. Remarks and open problems</a></li>
+<li><a href="#orgbac921a">7. Weights and main vertices of tiles</a></li>
+<li><a href="#org8c99588">8. Construction of the geodesic metric</a></li>
+<li><a href="#orgab4c801">9. Quasisymmetry</a></li>
+<li><a href="#orgce13bc4">10. Lowering the Hausdorff dimension</a></li>
+<li><a href="#org21e82e0">11. Remarks and open problems</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9850a67" class="outline-2">
-<h2 id="org9850a67">0. Abstract</h2>
-<div class="outline-text-2" id="text-org9850a67">
+
+<div id="outline-container-orgcbd3600" class="outline-2">
+<h2 id="orgcbd3600"><span class="section-number-2">1</span> Abstract</h2>
+<div class="outline-text-2" id="text-1">
 <p>
 This paper study the quasisymmetric uniformization problem for metric trees. 
 </p>
 </div>
 </div>
-<div id="outline-container-org79b09f5" class="outline-2">
-<h2 id="org79b09f5">1. Introduction</h2>
-<div class="outline-text-2" id="text-org79b09f5">
+<div id="outline-container-org94e792c" class="outline-2">
+<h2 id="org94e792c"><span class="section-number-2">2</span> Introduction</h2>
+<div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org37978ad" class="outline-3">
-<h3 id="org37978ad">Preliminaries</h3>
-<div class="outline-text-3" id="text-org37978ad">
+<div id="outline-container-orgd7cceab" class="outline-3">
+<h3 id="orgd7cceab"><span class="section-number-3">2.1</span> Preliminaries</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
 An important question in geometric analysis is whether a given metric space is geometrically equivalent to a model space in a natural way. 
 </p>
@@ -324,9 +325,9 @@ An important question in geometric analysis is whether a given metric space is g
 </div>
 </div>
 
-<div id="outline-container-orgbd7a554" class="outline-3">
-<h3 id="orgbd7a554">Tukia-Vaisala theorem</h3>
-<div class="outline-text-3" id="text-orgbd7a554">
+<div id="outline-container-org8d85072" class="outline-3">
+<h3 id="org8d85072"><span class="section-number-3">2.2</span> Tukia-Vaisala theorem</h3>
+<div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li><b>metric arc</b> \(J\) : a metric space \(J\) homeomorphic to the unit interval \([0,1]\)</li>
 <li><b>quasi-arc</b>: it is quasisymmetrically equivalent to \([0,1]\)</li>
@@ -341,9 +342,9 @@ An important question in geometric analysis is whether a given metric space is g
 </div>
 </div>
 
-<div id="outline-container-orgd58a158" class="outline-3">
-<h3 id="orgd58a158">Theorem 1.1</h3>
-<div class="outline-text-3" id="text-orgd58a158">
+<div id="outline-container-org862ae3b" class="outline-3">
+<h3 id="org862ae3b"><span class="section-number-3">2.3</span> Theorem 1.1</h3>
+<div class="outline-text-3" id="text-2-3">
 <p>
 This paper study the quasisymmetric uniformization problem for metric tress. 
 </p>
@@ -354,16 +355,23 @@ This paper study the quasisymmetric uniformization problem for metric tress.
 <li><b>quasi-tree</b> : a tree is doubling and of bounded turning (inspired by T-V theorem)</li>
 </ul>
 
+<div class="question">
 <p>
-<b>Question</b>: Can all arcs in a quasi-tree be out straightened out simultaneously by a quasisymmetry? 
+Can all arcs in a quasi-tree be out straightened out simultaneously by a quasisymmetry? 
 </p>
 
+</div>
+
+<div class="theorem">
 <p>
-<b>Theorem 1.1.</b> Every quasi-tree is quasisymmetrically equivalent to a geodesic tree.
+\label{thm:Straight}
+Every quasi-tree is quasisymmetrically equivalent to a geodesic tree.
 </p>
 
+</div>
+
 <p>
-Idea of theorem 1.1 is defining a geodesic metric \(\varrho\) on \((T, d)\) s.t. the identity map \(\text{id}_T : (T,d) \to (T, \varrho )\) is a quasisymmetry.  
+<i>Idea of theorem 1.1</i> is defining a geodesic metric \(\varrho\) on \((T, d)\) s.t. the identity map \(\text{id}_T : (T,d) \to (T, \varrho )\) is a quasisymmetry.  
 </p>
 <ol class="org-ol">
 <li>(Section 5) Choose a sequence of decompositions \(\{ X^n \}\) of \(T\) into subtrees.</li>
@@ -376,35 +384,42 @@ Idea of theorem 1.1 is defining a geodesic metric \(\varrho\) on \((T, d)\) s.t.
 </ol>
 
 <p>
-The main difficulty: how to define the decompositions \(X^n\)?
+<i>The main difficulty</i>: how to define the decompositions \(X^n\)?
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga1d9caa" class="outline-3">
-<h3 id="orga1d9caa">Theorem 1.2</h3>
-<div class="outline-text-3" id="text-orga1d9caa">
+<div id="outline-container-orgc30d402" class="outline-3">
+<h3 id="orgc30d402"><span class="section-number-3">2.4</span> Theorem 1.2</h3>
+<div class="outline-text-3" id="text-2-4">
+<div class="question">
 <p>
-<b>Question</b>: How small we can make the quasisymmetric image of a quasi-tree?
+How small we can make the quasisymmetric image of a quasi-tree?
 </p>
+
+</div>
 
 <p>
 The <b>conformal dimension</b> of a metric space \(X\), denoted by \(\text{confdim} (X)\), is the infimum of all Hausdorff dimensions of metric spaces \(Y\) that are quasisymmetrically equivalent to \(X\). 
 </p>
 
+<div class="theorem">
 <p>
-<b>Theorem 1.2.</b> The conformal dimension of a quasi-tree is 1. 
+\label{thm:Small}
+The conformal dimension of a quasi-tree is 1. 
 </p>
 
+</div>
+
 <p>
-Idea of theorem 1.2: The construction of \(\varrho\) involves a parameter \(\epsilon_0 > 0\). Show that, if \(\epsilon_0\) close to \(0\), then the Hausdorff dimension of \((T, \varrho)\) is close to \(1\). 
+<i>Idea of theorem 1.2</i>: The construction of \(\varrho\) involves a parameter \(\epsilon_0 > 0\). Show that, if \(\epsilon_0\) close to \(0\), then the Hausdorff dimension of \((T, \varrho)\) is close to \(1\). 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org46e4a09" class="outline-3">
-<h3 id="org46e4a09">Organization</h3>
-<div class="outline-text-3" id="text-org46e4a09">
+<div id="outline-container-org3033638" class="outline-3">
+<h3 id="org3033638"><span class="section-number-3">2.5</span> Organization</h3>
+<div class="outline-text-3" id="text-2-5">
 <ul class="org-ul">
 <li>Section 2: review some basic topological facts about trees.</li>
 <li>Section 3: prove a general fact that is of independent interest: we show that if on an arc some points cast a "shadow" satisfying suitable conditions, then one can always find a "place in the sun".</li>
@@ -418,9 +433,9 @@ Idea of theorem 1.2: The construction of \(\varrho\) involves a parameter \(\eps
 </div>
 </div>
 
-<div id="outline-container-orge0bb5e3" class="outline-3">
-<h3 id="orge0bb5e3">Notation</h3>
-<div class="outline-text-3" id="text-orge0bb5e3">
+<div id="outline-container-org0bc684c" class="outline-3">
+<h3 id="org0bc684c"><span class="section-number-3">2.6</span> Notation</h3>
+<div class="outline-text-3" id="text-2-6">
 <ul class="org-ul">
 <li>\(a \asymp b\): there is a constant \(C \geq 1\) s.t. \(C^{-1} a \leq b \leq C a\).</li>
 <li>\(\mathbb{N}\) and \(\mathbb{N}_0\)</li>
@@ -441,9 +456,9 @@ For \(A, B \subset X\)
 </div>
 </div>
 
-<div id="outline-container-org820c0c8" class="outline-2">
-<h2 id="org820c0c8">2. Auxiliary facts</h2>
-<div class="outline-text-2" id="text-org820c0c8">
+<div id="outline-container-orgab05b4f" class="outline-2">
+<h2 id="orgab05b4f"><span class="section-number-2">3</span> Auxiliary facts</h2>
+<div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>\(S \subset X\) is <b>\(s\) separated</b> for some \(s>0\) if \(d(x,y) > s\) for all \(x, y \in S\).</li>
 <li>\(S\) is <b>maximal</b> \(s\) separated set if it is not contained in a strictly larger subset which is also \(s\) separated.</li>
@@ -455,11 +470,24 @@ For \(A, B \subset X\)
 <li>The <b>interior points</b> of \(J\): \(\text{int} (J) := J \setminus \partial J\)</li>
 </ul>
 
+<div class="lemma">
 <p>
-<b>Lemma 2.1.</b> 
+\label{lem:EquallySeparateArc}
 Let \((J, d)\) be an arc and \(n \geq 2\). 
 Then we can decompose \(J\) into \(n\) non-overlapping subacrcs of equal diameter \(\Delta \geq \frac{1}{n} \text{diam}(J)\).
 </p>
+
+</div>
+
+<div class="proof">
+<p>
+<i>Proof.</i> 
+A decomposition of \(J\) into \(n\) non-overlapping subarcs of equal dimeter exists. (Lemma 2 of [Mel1])
+Denote their diameter by \(\Delta\). 
+We have \(\text{diam} (J) \leq n \Delta\) by the triangle inequality. 
+</p>
+
+</div>
 
 <ul class="org-ul">
 <li>A tree \(T\) and two points \(x, y \in T\)</li>
@@ -468,8 +496,8 @@ Then we can decompose \(J\) into \(n\) non-overlapping subacrcs of equal diamete
 <li>A subtree \(X\) of \(T\) if \(X\) equipped with the restriction of \(d\) is also a tree. \(X\) is a subtree of \(T\) iff \(X\) contains at least two points and is closed and connected.</li>
 </ul>
 
+<div class="lemma">
 <p>
-<b>Lemma 2.2</b>
 Let \((T,d)\) be a tree and \(V \subset T\) be a finite set. 
 Then the following statements are true:
 </p>
@@ -479,9 +507,29 @@ Then the following statements are true:
 <li>If \(U\) and \(W\) are two distinct components of \(T \setminus V\), then \(\bar{U}\) and \(\bar{W}\) have at most one point in common. Such a common point belongs to \(V\), and is a boundary point of both \(\bar{U}\) and \(\bar{W}\).</li>
 </ol>
 
+</div>
+
+<div class="proof">
 <p>
-Proof of Lemma 2.2. (Omitted.)
+<i>Proof of 1).</i>
+Since \(V\) is finite, it is closed. 
+Then \(T \setminus V\) is open. 
+Since \(T\) is locally path-connected (Lemma 3.1 of [BT18]), each component \(U\) of \(T \setminus V\) is open and path-connected. 
+If \(x\) and \(y\) are in \(U\), then there exists a path \(\gamma\) connecting \(x\) and \(y\) which stays in \(U\). 
+Since \(T\) is a tree, we have \([x, y] \subset \gamma \subset U\). 
+Then \([x, y] \cap U = \emptyset\). 
 </p>
+
+<p>
+Conversely, omitted. 
+</p>
+
+<p>
+<i>Proof of 2).</i>
+To prove \(\bar{U}\) is a subtree, only need to prove it contains more than one point which follows from the fact that \(T\) has no isolated points. 
+</p>
+
+</div>
 
 <ul class="org-ul">
 <li>\(p \in T\) and \(U\) a component of \(T \setminus \{ p \}\)</li>
@@ -542,9 +590,9 @@ Suppose \((T, d)\) is quasi-tree. Then Lemma 2.4 implies that \((T, dd)\) is bi-
 </div>
 </div>
 
-<div id="outline-container-org0feaa37" class="outline-2">
-<h2 id="org0feaa37">3. Sun and shadow</h2>
-<div class="outline-text-2" id="text-org0feaa37">
+<div id="outline-container-org25e3cbd" class="outline-2">
+<h2 id="org25e3cbd"><span class="section-number-2">4</span> Sun and shadow</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 In this section we will prove the following proposition, which allow us to find double points in \(T\) that stay away from the branch points of \(T\) in a geometrically controlled manner. 
 </p>
@@ -584,9 +632,9 @@ If we think of each point \(p \in J\) with \(S(p) > 0\) as "casting a shadow" of
 </div>
 </div>
 
-<div id="outline-container-org4e58836" class="outline-2">
-<h2 id="org4e58836">4. Good double points</h2>
-<div class="outline-text-2" id="text-org4e58836">
+<div id="outline-container-org9e7c5f4" class="outline-2">
+<h2 id="org9e7c5f4"><span class="section-number-2">5</span> Good double points</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 In this section we introduce the concept of a "good" double point of \(T\). 
 Attached to this concept are certain numerical parameters. 
@@ -655,18 +703,18 @@ for each component \(X\) of \(T \setminus V\).
 </div>
 </div>
 
-<div id="outline-container-org0f5d32a" class="outline-2">
-<h2 id="org0f5d32a">5. Subdividing the tree</h2>
-<div class="outline-text-2" id="text-org0f5d32a">
+<div id="outline-container-org7c0dd1a" class="outline-2">
+<h2 id="org7c0dd1a"><span class="section-number-2">6</span> Subdividing the tree</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 We want to subdivide our quasi-tree \(T\). 
 As before, assume that \(T\) is equipped with a diameter metric \(d\) and \(\text{diam} (T) = 1\). 
 Fix \(\beta \geq 1\) and \(\gamma > 0\) depending on doubling constant \(N\) of \(T\) and a small constant \(0 < \delta < 1/(3 \beta)\). 
 </p>
 </div>
-<div id="outline-container-orgccc6d88" class="outline-3">
-<h3 id="orgccc6d88">Vertices and tiles</h3>
-<div class="outline-text-3" id="text-orgccc6d88">
+<div id="outline-container-orgd3209f7" class="outline-3">
+<h3 id="orgd3209f7"><span class="section-number-3">6.1</span> Vertices and tiles</h3>
+<div class="outline-text-3" id="text-6-1">
 <p>
 We will inductively construct set \(V^n \subset T\) s.t. 
 </p>
@@ -756,9 +804,9 @@ For convenience, set \(V^0 := \emptyset\) and \(X^0 := T\).
 </div>
 </div>
 
-<div id="outline-container-org20d6d8f" class="outline-3">
-<h3 id="org20d6d8f">Chains</h3>
-<div class="outline-text-3" id="text-org20d6d8f">
+<div id="outline-container-orgba2663a" class="outline-3">
+<h3 id="orgba2663a"><span class="section-number-3">6.2</span> Chains</h3>
+<div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li><b>\(n\) chain</b> is a sequence \(P\) of \(n\) tiles \(X_1, ..., X_r\) with \(X_i \cap X_{i+1} \neq \emptyset\). And \(r\) is called the <b>length</b> of \(P\).</li>
 <li>\(P\) <b>joins</b> \(x\) and \(y\) if \(x \in X_1\) and \(y \in X_r\).</li>
@@ -795,9 +843,9 @@ The followings are true:
 </div>
 </div>
 
-<div id="outline-container-orgfc3646e" class="outline-3">
-<h3 id="orgfc3646e">Choosing \(\delta\)</h3>
-<div class="outline-text-3" id="text-orgfc3646e">
+<div id="outline-container-org96ab346" class="outline-3">
+<h3 id="org96ab346"><span class="section-number-3">6.3</span> Choosing \(\delta\)</h3>
+<div class="outline-text-3" id="text-6-3">
 <p>
 We now choose the parameter \(0 < \delta < 1/(3\beta)\) used in the definition of vertices and tiles so that \((n+1)\) tiles are contained in \(n\) tiles in a "controlled way". 
 </p>
@@ -849,9 +897,9 @@ There is a constant \(K \in \mathbb{N}\) s.t. the following statements hold for 
 </div>
 </div>
 
-<div id="outline-container-org37d45ec" class="outline-2">
-<h2 id="org37d45ec">6. Weights and main vertices of tiles</h2>
-<div class="outline-text-2" id="text-org37d45ec">
+<div id="outline-container-orgbac921a" class="outline-2">
+<h2 id="orgbac921a"><span class="section-number-2">7</span> Weights and main vertices of tiles</h2>
+<div class="outline-text-2" id="text-7">
 <p>
 We will now define <i>weight</i> of tiles. 
 Later they will be used to construct our desired geodesic metric \(\varrho\). 
@@ -866,40 +914,65 @@ Later they will be used to construct our desired geodesic metric \(\varrho\).
 </div>
 </div>
 
-<div id="outline-container-orge32c572" class="outline-2">
-<h2 id="orge32c572">7. Construction of the geodesic metric</h2>
-<div class="outline-text-2" id="text-orge32c572">
+<div id="outline-container-org8c99588" class="outline-2">
+<h2 id="org8c99588"><span class="section-number-2">8</span> Construction of the geodesic metric</h2>
+<div class="outline-text-2" id="text-8">
 <p>
 Based on weights defined in the previous section, we define a new metric \(\varrho\) on \((T, d)\). 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc101493" class="outline-2">
-<h2 id="orgc101493">8. Quasisymmetry</h2>
-<div class="outline-text-2" id="text-orgc101493">
+<div id="outline-container-orgab4c801" class="outline-2">
+<h2 id="orgab4c801"><span class="section-number-2">9</span> Quasisymmetry</h2>
+<div class="outline-text-2" id="text-9">
 <p>
 In this section, we prove Theorem 1.1 by showing that \(( T, d)\) is quasisymmetrically equivalent to \((T, \varrho)\). 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf831b23" class="outline-2">
-<h2 id="orgf831b23">9. Lowering the Hausdorff dimension</h2>
-<div class="outline-text-2" id="text-orgf831b23">
+<div id="outline-container-orgce13bc4" class="outline-2">
+<h2 id="orgce13bc4"><span class="section-number-2">10</span> Lowering the Hausdorff dimension</h2>
+<div class="outline-text-2" id="text-10">
 <p>
 In this section we will prove Theorem 1.2. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb27a68a" class="outline-2">
-<h2 id="orgb27a68a">10. Remarks and open problems</h2>
+<div id="outline-container-org21e82e0" class="outline-2">
+<h2 id="org21e82e0"><span class="section-number-2">11</span> Remarks and open problems</h2>
+<div class="outline-text-2" id="text-11">
+<div class="question">
+<p>
+For every quasi-tree \(T\), is there a quasisymmetric embedding \(\phi: T \to \mathbb{C}\) with good geometric properties?
+</p>
+<ul class="org-ul">
+<li>e.g. s.t. \(\phi(T)\) is quasi-convex w.r.t. \(d_{\mathbb{R}^2}\). (Then it is geodesic if equipped with its internal path metric) and \(\mathbb{C} \setminus T\) is a nice domain (e.g. a John domain)</li>
+</ul>
+
+</div>
+
+<div class="question">
+<p>
+How about quasi-trees which are not doubling?
+</p>
+
+</div>
+
+<div class="question">
+<p>
+How about quasi-graphs?
+</p>
+
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Bonk, Mario; Meyer, Daniel</p>
-<p class="date">Created: 2019-03-03 Sun 20:29</p>
+<p class="date">Created: 2019-03-06 Wed 21:27</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
