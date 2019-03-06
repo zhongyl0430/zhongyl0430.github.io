@@ -28,7 +28,7 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-[Quasi-trees and geodesic trees](https://github.com/zhongyl0430/zhongyl0430.github.io/blob/master/Quasi-trees-and-geodesic-trees.html)
+[Quasi-trees and geodesic trees](doc/Quasi-trees-and-geodesic-trees.html)
 
 ### Jekyll Themes
 
