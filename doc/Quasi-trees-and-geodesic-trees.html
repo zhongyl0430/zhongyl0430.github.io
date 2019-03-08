@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-03-06 Wed 21:27 -->
+<!-- 2019-03-08 Fri 12:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Quasi-trees and geodesic trees</title>
@@ -256,50 +256,56 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgcbd3600">1. Abstract</a></li>
-<li><a href="#org94e792c">2. Introduction</a>
+<li><a href="#org8e28c57">1. Abstract</a></li>
+<li><a href="#orgd30b298">2. Introduction</a>
 <ul>
-<li><a href="#orgd7cceab">2.1. Preliminaries</a></li>
-<li><a href="#org8d85072">2.2. Tukia-Vaisala theorem</a></li>
-<li><a href="#org862ae3b">2.3. Theorem 1.1</a></li>
-<li><a href="#orgc30d402">2.4. Theorem 1.2</a></li>
-<li><a href="#org3033638">2.5. Organization</a></li>
-<li><a href="#org0bc684c">2.6. Notation</a></li>
+<li><a href="#org918638f">2.1. Preliminaries</a></li>
+<li><a href="#org77c48e5">2.2. Tukia-Vaisala theorem</a></li>
+<li><a href="#orge702974">2.3. Theorem 1.1</a></li>
+<li><a href="#orgdc15253">2.4. Theorem 1.2</a></li>
+<li><a href="#orge114c11">2.5. Organization</a></li>
+<li><a href="#org7259131">2.6. Notation</a></li>
+<li><a href="#org08bbdd2">2.7. Something about Quasisymmetry</a>
+<ul>
+<li><a href="#orga6e97d2">2.7.1. Quasisymmetric map and quasiconformal map</a></li>
+<li><a href="#org3689991">2.7.2. Quasicircle curve and Jordan curve</a></li>
 </ul>
 </li>
-<li><a href="#orgab05b4f">3. Auxiliary facts</a></li>
-<li><a href="#org25e3cbd">4. Sun and shadow</a></li>
-<li><a href="#org9e7c5f4">5. Good double points</a></li>
-<li><a href="#org7c0dd1a">6. Subdividing the tree</a>
-<ul>
-<li><a href="#orgd3209f7">6.1. Vertices and tiles</a></li>
-<li><a href="#orgba2663a">6.2. Chains</a></li>
-<li><a href="#org96ab346">6.3. Choosing \(\delta\)</a></li>
 </ul>
 </li>
-<li><a href="#orgbac921a">7. Weights and main vertices of tiles</a></li>
-<li><a href="#org8c99588">8. Construction of the geodesic metric</a></li>
-<li><a href="#orgab4c801">9. Quasisymmetry</a></li>
-<li><a href="#orgce13bc4">10. Lowering the Hausdorff dimension</a></li>
-<li><a href="#org21e82e0">11. Remarks and open problems</a></li>
+<li><a href="#orgf5f199c">3. Auxiliary facts</a></li>
+<li><a href="#org5ae6ab1">4. Sun and shadow</a></li>
+<li><a href="#orgb4b8a62">5. Good double points</a></li>
+<li><a href="#orgbf891a7">6. Subdividing the tree</a>
+<ul>
+<li><a href="#org9c5a9f5">6.1. Vertices and tiles</a></li>
+<li><a href="#org0993e12">6.2. Chains</a></li>
+<li><a href="#org0844538">6.3. Choosing \(\delta\)</a></li>
+</ul>
+</li>
+<li><a href="#org29e42bf">7. Weights and main vertices of tiles</a></li>
+<li><a href="#org62bfd73">8. Construction of the geodesic metric</a></li>
+<li><a href="#org7520865">9. Quasisymmetry</a></li>
+<li><a href="#orgd031bc8">10. Lowering the Hausdorff dimension</a></li>
+<li><a href="#orgd862176">11. Remarks and open problems</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgcbd3600" class="outline-2">
-<h2 id="orgcbd3600"><span class="section-number-2">1</span> Abstract</h2>
+<div id="outline-container-org8e28c57" class="outline-2">
+<h2 id="org8e28c57"><span class="section-number-2">1</span> Abstract</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 This paper study the quasisymmetric uniformization problem for metric trees. 
 </p>
 </div>
 </div>
-<div id="outline-container-org94e792c" class="outline-2">
-<h2 id="org94e792c"><span class="section-number-2">2</span> Introduction</h2>
+<div id="outline-container-orgd30b298" class="outline-2">
+<h2 id="orgd30b298"><span class="section-number-2">2</span> Introduction</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgd7cceab" class="outline-3">
-<h3 id="orgd7cceab"><span class="section-number-3">2.1</span> Preliminaries</h3>
+<div id="outline-container-org918638f" class="outline-3">
+<h3 id="org918638f"><span class="section-number-3">2.1</span> Preliminaries</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 An important question in geometric analysis is whether a given metric space is geometrically equivalent to a model space in a natural way. 
@@ -325,8 +331,8 @@ An important question in geometric analysis is whether a given metric space is g
 </div>
 </div>
 
-<div id="outline-container-org8d85072" class="outline-3">
-<h3 id="org8d85072"><span class="section-number-3">2.2</span> Tukia-Vaisala theorem</h3>
+<div id="outline-container-org77c48e5" class="outline-3">
+<h3 id="org77c48e5"><span class="section-number-3">2.2</span> Tukia-Vaisala theorem</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li><b>metric arc</b> \(J\) : a metric space \(J\) homeomorphic to the unit interval \([0,1]\)</li>
@@ -342,8 +348,8 @@ An important question in geometric analysis is whether a given metric space is g
 </div>
 </div>
 
-<div id="outline-container-org862ae3b" class="outline-3">
-<h3 id="org862ae3b"><span class="section-number-3">2.3</span> Theorem 1.1</h3>
+<div id="outline-container-orge702974" class="outline-3">
+<h3 id="orge702974"><span class="section-number-3">2.3</span> Theorem 1.1</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 This paper study the quasisymmetric uniformization problem for metric tress. 
@@ -389,8 +395,8 @@ Every quasi-tree is quasisymmetrically equivalent to a geodesic tree.
 </div>
 </div>
 
-<div id="outline-container-orgc30d402" class="outline-3">
-<h3 id="orgc30d402"><span class="section-number-3">2.4</span> Theorem 1.2</h3>
+<div id="outline-container-orgdc15253" class="outline-3">
+<h3 id="orgdc15253"><span class="section-number-3">2.4</span> Theorem 1.2</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="question">
 <p>
@@ -417,8 +423,8 @@ The conformal dimension of a quasi-tree is 1.
 </div>
 </div>
 
-<div id="outline-container-org3033638" class="outline-3">
-<h3 id="org3033638"><span class="section-number-3">2.5</span> Organization</h3>
+<div id="outline-container-orge114c11" class="outline-3">
+<h3 id="orge114c11"><span class="section-number-3">2.5</span> Organization</h3>
 <div class="outline-text-3" id="text-2-5">
 <ul class="org-ul">
 <li>Section 2: review some basic topological facts about trees.</li>
@@ -433,8 +439,8 @@ The conformal dimension of a quasi-tree is 1.
 </div>
 </div>
 
-<div id="outline-container-org0bc684c" class="outline-3">
-<h3 id="org0bc684c"><span class="section-number-3">2.6</span> Notation</h3>
+<div id="outline-container-org7259131" class="outline-3">
+<h3 id="org7259131"><span class="section-number-3">2.6</span> Notation</h3>
 <div class="outline-text-3" id="text-2-6">
 <ul class="org-ul">
 <li>\(a \asymp b\): there is a constant \(C \geq 1\) s.t. \(C^{-1} a \leq b \leq C a\).</li>
@@ -454,10 +460,45 @@ For \(A, B \subset X\)
 </ul>
 </div>
 </div>
-</div>
 
-<div id="outline-container-orgab05b4f" class="outline-2">
-<h2 id="orgab05b4f"><span class="section-number-2">3</span> Auxiliary facts</h2>
+<div id="outline-container-org08bbdd2" class="outline-3">
+<h3 id="org08bbdd2"><span class="section-number-3">2.7</span> Something about Quasisymmetry</h3>
+<div class="outline-text-3" id="text-2-7">
+</div>
+<div id="outline-container-orga6e97d2" class="outline-4">
+<h4 id="orga6e97d2"><span class="section-number-4">2.7.1</span> Quasisymmetric map and quasiconformal map</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<ul class="org-ul">
+<li>If \(f\) is quasisymmetric, then it is quasiconformal.</li>
+</ul>
+<p>
+(Check the \(f\) image every small circle. )
+</p>
+<ul class="org-ul">
+<li>If \(f\) is quasiconformal in \(B(r)\), then it is quasisymmetric in \(B(r/2)\).</li>
+</ul>
+<p>
+(Proof ?)
+</p>
+</div>
+</div>
+<div id="outline-container-org3689991" class="outline-4">
+<h4 id="org3689991"><span class="section-number-4">2.7.2</span> Quasicircle curve and Jordan curve</h4>
+<div class="outline-text-4" id="text-2-7-2">
+<p>
+A Jordan curve cuts a sphere into two John domains iff it is quasicircle. 
+</p>
+<ul class="org-ul">
+<li>A Jordan curve is a plain curve which is topologically equivalent to a homeomorphic image of a circle.</li>
+<li>John domain is a region in the Riemann sphere satisfies that every point can be reach from a fixed base point by a flexible cone at a definite angle at its vertex.</li>
+<li>A quasicircle is the image of a circle under a quasiconformal map of a plane onto itself.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf5f199c" class="outline-2">
+<h2 id="orgf5f199c"><span class="section-number-2">3</span> Auxiliary facts</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>\(S \subset X\) is <b>\(s\) separated</b> for some \(s>0\) if \(d(x,y) > s\) for all \(x, y \in S\).</li>
@@ -526,7 +567,23 @@ Conversely, omitted.
 
 <p>
 <i>Proof of 2).</i>
-To prove \(\bar{U}\) is a subtree, only need to prove it contains more than one point which follows from the fact that \(T\) has no isolated points. 
+\(\bar{U}\) is a subtree: only need to prove it contains more than one point which follows from the fact that \(T\) has no isolated points. 
+</p>
+
+<p>
+\(\partial \bar{U} \subset \partial U}\): Why not \(=\)? \(\partial A =  \bar{A} \setminus A\). 
+</p>
+
+<p>
+\(\partial U \subset T\): for any \(x \in \partial U\), then \(x\) does not belong to \(T \setminus V\). Then \(x \in V\) since \(x \in T\). 
+</p>
+
+<p>
+<i>Proof of 3).</i>
+Assume that \(\bar{U}\) and \(\bar{V}\) has two common points. 
+Let \(\gamma_U\) and \(\gamma_V\) be two arcs connecting \(u\) and \(v\) in \(\bar{U}\) and \(\bar{V}\) respectively. 
+Then \(\gamma_U \cup \gamma_V\) is a closed curve in \(T\). 
+Contradiction arises. 
 </p>
 
 </div>
@@ -567,9 +624,48 @@ Then \(x_i\) lie in different components of \(T \setminus \{b\}\) and \(b\) is a
 <li>\((T, d)\) is \(K\) boundaed turning iff \(id_T: (T,d) \to (T, dd)\) is \(K\) bi-Lipschitz.</li>
 </ol>
 
+<div class="proof">
 <p>
-Proof of Lemma 2.4. 
+<i>Proof of 1).</i> 
+Check the followings. 
 </p>
+
+<ol class="org-ol">
+<li>\(dd(x, y) = \text{diam} [x,y] \geq 0\) and \(\text{diam} [x,y] = 0\) iff \(x = y\).</li>
+<li>\(dd(x, y) = \text{diam} [x, y] = dd(y, x)\).</li>
+<li></li>
+</ol>
+\begin{align*}
+dd(x, z) 
+&= \text{diam} [x, z] \leq \text{diam} [x,y] \cup [y,z] \\
+&\leq \text{diam} [x,y] + \text{diam} [y,z]
+= dd(x,y) + dd(y,z). 
+\end{align*}
+
+<p>
+<i>Proof of 2).</i>
+</p>
+<ol class="org-ol">
+<li>\(\geq\): Since \(dd \geq d\), we have \(\text{diam}_dd \geq \text{diam}\).</li>
+<li>\(\leq\): for any \(x,y \in J\), we have \([x, y] \subset J\). Then \(dd(x,y) = \text{diam} [x,y] \leq \text{diam} J\). Then \(\diam_dd (J) = \sup_{x,y \in J} dd(x,y) \leq \text{diam} J\).</li>
+</ol>
+
+<p>
+<i>Proof of 3).</i>
+By 2), \(dd (x,y) = \text{diam} [x,y] = \text{diam}_{dd} [x,y]\). 
+</p>
+
+<p>
+<i>Proof of 4).</i>
+<i>if</i>: \(K\) bounded turning implies that \(dd(x,y) = \text{diam} [x,y] \leq K d(x, y)\). 
+Combining \(d \leq dd\), we have \(id_T\) is \(K\) Lips. 
+</p>
+
+<p>
+<i>only if</i>: \(\text{diam} [x,y] = dd(x,y) \leq K d(x,y)\). 
+</p>
+
+</div>
 
 <ul class="org-ul">
 <li>A metric \(d\) is called a <b>diameter metric</b> if \(d(x,y) = \text{diam} [x,y]\). Then \(d = dd\).</li>
@@ -590,8 +686,8 @@ Suppose \((T, d)\) is quasi-tree. Then Lemma 2.4 implies that \((T, dd)\) is bi-
 </div>
 </div>
 
-<div id="outline-container-org25e3cbd" class="outline-2">
-<h2 id="org25e3cbd"><span class="section-number-2">4</span> Sun and shadow</h2>
+<div id="outline-container-org5ae6ab1" class="outline-2">
+<h2 id="org5ae6ab1"><span class="section-number-2">4</span> Sun and shadow</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 In this section we will prove the following proposition, which allow us to find double points in \(T\) that stay away from the branch points of \(T\) in a geometrically controlled manner. 
@@ -618,10 +714,26 @@ and
 \[ \text{dist} (I, A \cup \partial J') \geq \frac{1}{6M} \text{diam} (J). \] 
 </p>
 
+<div class="proof">
+<p>
+<i>Proof.</i> 
+By Lemma 2.1, there exists a decomposition \(\{ J_i | i =1, ..., 2M \}\) of \(J\) s.t. \(\text{diam} J_i = \Delta \geq \frac{1}{2M} \text{diam} J'\). 
+By \(\# ( A \cap J' ) \leq M\), there exists \(J_i\) does not intersect \(A\). 
+Take the middle subarc \(I\) of this arc of length \(\frac{1}{6M} \text{diam} J'\). 
+Then the distance between \(I\) and the boundary of this arc is larger \(\frac{1}{3} \Delta = \frac{1}{6M} \text{diam} J\). 
+</p>
+
+</div>
+
 <p>
 <b>Lemma 3.3</b> (Ein Platz an der Sonne)
 Let \(( J, d)\) be a diameter metric arc and \(S: J \to [0, \text{diam} (J)]\) be a function. Suppose there is a constant \(M\) s.t. for all subarcs \(I \subset J\) we have
-\[ \# \{ p \in I : S(p) \geq \text{diam} (I) \} \leq M. \]
+</p>
+\begin{equation*}
+\# \{ p \in I : S(p) \geq \text{diam} (I) \} \leq M. 
+\tag{3.2}
+\end{equation*}
+<p>
 There exists a constant \(\sigma = \sigma(M) > 0\) and a point \(x \in J\) s.t. \(d(x,p) \geq \sigma S(p)\) for all \(p \in J\). 
 </p>
 
@@ -629,11 +741,128 @@ There exists a constant \(\sigma = \sigma(M) > 0\) and a point \(x \in J\) s.t. 
 In other words, the set \(J \setminus \cup_{p \in J} B(p, \sigma S(p))\) is non-empty. 
 If we think of each point \(p \in J\) with \(S(p) > 0\) as "casting a shadow" of radius \(\sigma S(p)\) around \(p\), then the lemma says that the union of all shadows does not cover \(J\), and so there is a "place in the sun". 
 </p>
-</div>
+
+<div class="proof">
+<p>
+<i>Proof.</i> 
+WLOG, assume that \(\text{diam} J = 1\). 
+Let \(\lambda := /frac{1}{6M}\) and 
+\[ A_n := \{ p \in A : S(p) \geq \lambda^n \}. \]
+Then \(A := \cup_n A_n\) is all points in \(J\) with \(S(p) > 0\). 
+</p>
+
+<p>
+Init: 
+Set \(J_0 := J\). 
+Then \(\text{diam} J_0 = 1 = \lambda^0\). 
+</p>
+
+<p>
+\(n+1\) step: 
+Assume that \(J_n\) satisfies \(\text{diam} J_n = \lambda^n\). 
+We have \(A_n \cap J_n\) is
+\[ \{ p \in J_n : S(p) \geq \lambda^n = \text{diam} J_n \}. \]
+By the condition (3.2), we have \(\# (A_n \cap J_n) \leq M\). 
+By Lemma 3.2, we can take a subarc \(J_{n+1} \subset J_n\) satisfies
+\[ \text{diam} J_{n+1} = \frac{1}{6M} \text{diam} J_n = \lambda \text{diam} J_n = \lambda^{n+1}\]
+and 
+\[ \text{dist} (J_{n+1}, A_n) \geq \frac{1}{6M} \text{diam} J_n = \lambda^{n+1}. \]
+</p>
+
+<p>
+Then \(\cap_n J_n \neq \emptyset\). 
+Pick \(x\) from it. 
+For \(p\) with \(S(p) >0\), there exists an \(n\) with \(\lambda^{n} \leq S(p) < \lambda^{n-1}\) which implies that \(p \in A_n\). 
+Since \(x \in J_{n+1}\), we have 
+\[ d(x, p) \geq \text{dist} (x, A_n) \geq \lambda^{n+1} > \lambda^2 S(p). \]
+Take \(\sigma = \lambda^2 = \frac{1}{36 M^2}\), then \(x\) is a point as desired. 
+</p>
+
 </div>
 
-<div id="outline-container-org9e7c5f4" class="outline-2">
-<h2 id="org9e7c5f4"><span class="section-number-2">5</span> Good double points</h2>
+<div class="proof">
+<p>
+<i>Proof of Proposition 3.2</i>
+</p>
+
+<p>
+Let \(\Delta > 0\) and \(J = [u,v]\) with \(\text{diam} J \geq \Delta\). 
+Define a function $S : J &rarr; [0, \text{diam} J] as follows: 
+</p>
+<ul class="org-ul">
+<li>\(S(p) = \Delta\) if \(p = u\) or \(v\)</li>
+<li>\(S(p) = \min \{ H_T(p), \Delta \}\) if \(p\) is a branch point</li>
+<li>\(S(p) = 0\) otherwise</li>
+</ul>
+
+<p>
+<i>Claim.</i> 
+(Condition of Lemma 3.3)
+There exists a constant \(M = M(N)\) s.t. for all arcs \(I \subset J\) we have
+</p>
+\begin{equation*}
+\# \{ p \in I : S(p) \geq \text{diam} I \} \leq M. 
+\end{equation*}
+
+<p>
+By Lemma 3.3, there exists a constant \(\sigma\) and \(x \in J\) s.t. for all \(p \in J\) we have
+\[ d(x, p) \geq \sigma S(p). \]
+</p>
+
+<p>
+Assume that \(0 < \sigma \leq 1\). 
+(so that \(\sigma^2 \leq \sigma\))
+</p>
+
+<p>
+Let \(\gamma := \frac{\sigma^2}{2}\). 
+Check that \(x\) is a desired point for proposition. 
+Let \(b \in T\) be a branch point and \(r\) be the first point in \(J \cap [b,x]\). 
+Consider two cases depending on the location of \(r\). 
+</p>
+
+<p>
+<i>Case 1.</i>
+\(r \in B(u, \sigma \Delta / 2) \cup B(v, \sigma \Delta /2)\). 
+Assume that \(r \in B(u, \sigma \Delta /2)\). 
+We have
+</p>
+\begin{align*}
+d(x,b)
+&= \text{diam} [x,b]
+\geq d(x,r) \\
+&\geq d(x,u) - d(r,u) \\
+&\geq \sigma S(u) - \sigma \Delta / 2 \quad \text{(choice of $x$ and $r \in B(u, \Delta / 2)$)} \\
+&= \sigma \Delta / 2 \quad \text{(definite of $S$)} \\
+&\geq \sigma \min \{ H_T (b), \Delta \} /2 \\
+&\geq \gamma \min \{ H_T (b), \Delta \} \quad \text{(definition of $\gamma$ and $0 < \sigma < 1$)}. 
+\end{align*}
+
+<p>
+<i>Case 2.</i> 
+\(r \notin B(u, \sigma \Delta /2) \cup B(v, \sigma \Delta /2)\). 
+See Figure 3 of the paper. 
+There exists a component \(U\) of \(T \setminus \{b\}\) disjoint from \(J\) and satisfies 
+\[ \text{diam} U \geq H_T (b). \]
+Let \(V_1\) be a component of \(T \setminus \{ r \}\) containing \(U\). 
+Hence 
+\[\text{diam} V_1 \geq \text{diam} U \geq H_T(b). \]
+Let \(V_2\) and \(V_3\) be the components containing \([u,r)\) and \([v,r)\) respectively. 
+Assum that \(x \in V_3\). 
+We have 
+</p>
+\begin{align*}
+\text{diam} V_2
+&\geq \text{diam} [u,r)
+\geq d(u,r) \\
+&\geq \sigma \Delta /2 \quad \text{(assumption of case)}. 
+\end{align*} 
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgb4b8a62" class="outline-2">
+<h2 id="orgb4b8a62"><span class="section-number-2">5</span> Good double points</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 In this section we introduce the concept of a "good" double point of \(T\). 
@@ -703,8 +932,8 @@ for each component \(X\) of \(T \setminus V\).
 </div>
 </div>
 
-<div id="outline-container-org7c0dd1a" class="outline-2">
-<h2 id="org7c0dd1a"><span class="section-number-2">6</span> Subdividing the tree</h2>
+<div id="outline-container-orgbf891a7" class="outline-2">
+<h2 id="orgbf891a7"><span class="section-number-2">6</span> Subdividing the tree</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 We want to subdivide our quasi-tree \(T\). 
@@ -712,8 +941,8 @@ As before, assume that \(T\) is equipped with a diameter metric \(d\) and \(\tex
 Fix \(\beta \geq 1\) and \(\gamma > 0\) depending on doubling constant \(N\) of \(T\) and a small constant \(0 < \delta < 1/(3 \beta)\). 
 </p>
 </div>
-<div id="outline-container-orgd3209f7" class="outline-3">
-<h3 id="orgd3209f7"><span class="section-number-3">6.1</span> Vertices and tiles</h3>
+<div id="outline-container-org9c5a9f5" class="outline-3">
+<h3 id="org9c5a9f5"><span class="section-number-3">6.1</span> Vertices and tiles</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 We will inductively construct set \(V^n \subset T\) s.t. 
@@ -804,8 +1033,8 @@ For convenience, set \(V^0 := \emptyset\) and \(X^0 := T\).
 </div>
 </div>
 
-<div id="outline-container-orgba2663a" class="outline-3">
-<h3 id="orgba2663a"><span class="section-number-3">6.2</span> Chains</h3>
+<div id="outline-container-org0993e12" class="outline-3">
+<h3 id="org0993e12"><span class="section-number-3">6.2</span> Chains</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li><b>\(n\) chain</b> is a sequence \(P\) of \(n\) tiles \(X_1, ..., X_r\) with \(X_i \cap X_{i+1} \neq \emptyset\). And \(r\) is called the <b>length</b> of \(P\).</li>
@@ -843,8 +1072,8 @@ The followings are true:
 </div>
 </div>
 
-<div id="outline-container-org96ab346" class="outline-3">
-<h3 id="org96ab346"><span class="section-number-3">6.3</span> Choosing \(\delta\)</h3>
+<div id="outline-container-org0844538" class="outline-3">
+<h3 id="org0844538"><span class="section-number-3">6.3</span> Choosing \(\delta\)</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 We now choose the parameter \(0 < \delta < 1/(3\beta)\) used in the definition of vertices and tiles so that \((n+1)\) tiles are contained in \(n\) tiles in a "controlled way". 
@@ -897,8 +1126,8 @@ There is a constant \(K \in \mathbb{N}\) s.t. the following statements hold for 
 </div>
 </div>
 
-<div id="outline-container-orgbac921a" class="outline-2">
-<h2 id="orgbac921a"><span class="section-number-2">7</span> Weights and main vertices of tiles</h2>
+<div id="outline-container-org29e42bf" class="outline-2">
+<h2 id="org29e42bf"><span class="section-number-2">7</span> Weights and main vertices of tiles</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 We will now define <i>weight</i> of tiles. 
@@ -914,8 +1143,8 @@ Later they will be used to construct our desired geodesic metric \(\varrho\).
 </div>
 </div>
 
-<div id="outline-container-org8c99588" class="outline-2">
-<h2 id="org8c99588"><span class="section-number-2">8</span> Construction of the geodesic metric</h2>
+<div id="outline-container-org62bfd73" class="outline-2">
+<h2 id="org62bfd73"><span class="section-number-2">8</span> Construction of the geodesic metric</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Based on weights defined in the previous section, we define a new metric \(\varrho\) on \((T, d)\). 
@@ -923,8 +1152,8 @@ Based on weights defined in the previous section, we define a new metric \(\varr
 </div>
 </div>
 
-<div id="outline-container-orgab4c801" class="outline-2">
-<h2 id="orgab4c801"><span class="section-number-2">9</span> Quasisymmetry</h2>
+<div id="outline-container-org7520865" class="outline-2">
+<h2 id="org7520865"><span class="section-number-2">9</span> Quasisymmetry</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 In this section, we prove Theorem 1.1 by showing that \(( T, d)\) is quasisymmetrically equivalent to \((T, \varrho)\). 
@@ -932,8 +1161,8 @@ In this section, we prove Theorem 1.1 by showing that \(( T, d)\) is quasisymmet
 </div>
 </div>
 
-<div id="outline-container-orgce13bc4" class="outline-2">
-<h2 id="orgce13bc4"><span class="section-number-2">10</span> Lowering the Hausdorff dimension</h2>
+<div id="outline-container-orgd031bc8" class="outline-2">
+<h2 id="orgd031bc8"><span class="section-number-2">10</span> Lowering the Hausdorff dimension</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 In this section we will prove Theorem 1.2. 
@@ -941,8 +1170,8 @@ In this section we will prove Theorem 1.2.
 </div>
 </div>
 
-<div id="outline-container-org21e82e0" class="outline-2">
-<h2 id="org21e82e0"><span class="section-number-2">11</span> Remarks and open problems</h2>
+<div id="outline-container-orgd862176" class="outline-2">
+<h2 id="orgd862176"><span class="section-number-2">11</span> Remarks and open problems</h2>
 <div class="outline-text-2" id="text-11">
 <div class="question">
 <p>
@@ -972,7 +1201,7 @@ How about quasi-graphs?
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Bonk, Mario; Meyer, Daniel</p>
-<p class="date">Created: 2019-03-06 Wed 21:27</p>
+<p class="date">Created: 2019-03-08 Fri 12:17</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
