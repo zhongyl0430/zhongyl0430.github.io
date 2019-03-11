@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-03-09 Sat 20:00 -->
+<!-- 2019-03-11 Mon 19:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Quasi-trees and geodesic trees</title>
@@ -256,56 +256,56 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9fdc75d">1. Abstract</a></li>
-<li><a href="#orgbbf2e8c">2. Introduction</a>
+<li><a href="#orgb2fcdfa">1. Abstract</a></li>
+<li><a href="#org3282cc8">2. Introduction</a>
 <ul>
-<li><a href="#org22069ed">2.1. Preliminaries</a></li>
-<li><a href="#org161e64b">2.2. Tukia-Vaisala theorem</a></li>
-<li><a href="#org99eea5d">2.3. Theorem 1.1</a></li>
-<li><a href="#orga50a19d">2.4. Theorem 1.2</a></li>
-<li><a href="#org6cac3f5">2.5. Organization</a></li>
-<li><a href="#org20f1b60">2.6. Notation</a></li>
-<li><a href="#orge9248f4">2.7. Something about Quasisymmetry</a>
+<li><a href="#org8418518">2.1. Preliminaries</a></li>
+<li><a href="#orgb9f42ec">2.2. Tukia-Vaisala theorem</a></li>
+<li><a href="#org40f1ea1">2.3. Theorem 1.1</a></li>
+<li><a href="#org4fa0596">2.4. Theorem 1.2</a></li>
+<li><a href="#org4b2a4d9">2.5. Organization</a></li>
+<li><a href="#orgfb4f694">2.6. Notation</a></li>
+<li><a href="#org972d43f">2.7. Something about Quasisymmetry</a>
 <ul>
-<li><a href="#orgedacee1">2.7.1. Quasisymmetric map and quasiconformal map</a></li>
-<li><a href="#orgea0af35">2.7.2. Quasicircle curve and Jordan curve</a></li>
+<li><a href="#orgc49429f">2.7.1. Quasisymmetric map and quasiconformal map</a></li>
+<li><a href="#org69e50d1">2.7.2. Quasicircle curve and Jordan curve</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org9192427">3. Auxiliary facts</a></li>
-<li><a href="#org1012f2d">4. Sun and shadow</a></li>
-<li><a href="#org5a2ac20">5. Good double points</a></li>
-<li><a href="#orgdeb3521">6. Subdividing the tree</a>
+<li><a href="#orgb660283">3. Auxiliary facts</a></li>
+<li><a href="#orgde7cfe9">4. Sun and shadow</a></li>
+<li><a href="#orge95d047">5. Good double points</a></li>
+<li><a href="#org92b4532">6. Subdividing the tree</a>
 <ul>
-<li><a href="#org86a9cf2">6.1. Vertices and tiles</a></li>
-<li><a href="#org1df45ec">6.2. Chains</a></li>
-<li><a href="#org4542efb">6.3. Choosing \(\delta\)</a></li>
+<li><a href="#org93b7eb6">6.1. Vertices and tiles</a></li>
+<li><a href="#orgc5a4769">6.2. Chains</a></li>
+<li><a href="#orga319df0">6.3. Choosing \(\delta\)</a></li>
 </ul>
 </li>
-<li><a href="#org2c737cc">7. Weights and main vertices of tiles</a></li>
-<li><a href="#org533b6b7">8. Construction of the geodesic metric</a></li>
-<li><a href="#org463c8a4">9. Quasisymmetry</a></li>
-<li><a href="#org4d9bb7f">10. Lowering the Hausdorff dimension</a></li>
-<li><a href="#org7823b54">11. Remarks and open problems</a></li>
+<li><a href="#org1ebcf1e">7. Weights and main vertices of tiles</a></li>
+<li><a href="#org596f847">8. Construction of the geodesic metric</a></li>
+<li><a href="#org8fd90db">9. Quasisymmetry</a></li>
+<li><a href="#org3e9451e">10. Lowering the Hausdorff dimension</a></li>
+<li><a href="#orgb0e600f">11. Remarks and open problems</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org9fdc75d" class="outline-2">
-<h2 id="org9fdc75d"><span class="section-number-2">1</span> Abstract</h2>
+<div id="outline-container-orgb2fcdfa" class="outline-2">
+<h2 id="orgb2fcdfa"><span class="section-number-2">1</span> Abstract</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 This paper study the quasisymmetric uniformization problem for metric trees. 
 </p>
 </div>
 </div>
-<div id="outline-container-orgbbf2e8c" class="outline-2">
-<h2 id="orgbbf2e8c"><span class="section-number-2">2</span> Introduction</h2>
+<div id="outline-container-org3282cc8" class="outline-2">
+<h2 id="org3282cc8"><span class="section-number-2">2</span> Introduction</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org22069ed" class="outline-3">
-<h3 id="org22069ed"><span class="section-number-3">2.1</span> Preliminaries</h3>
+<div id="outline-container-org8418518" class="outline-3">
+<h3 id="org8418518"><span class="section-number-3">2.1</span> Preliminaries</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 An important question in geometric analysis is whether a given metric space is geometrically equivalent to a model space in a natural way. 
@@ -331,8 +331,8 @@ An important question in geometric analysis is whether a given metric space is g
 </div>
 </div>
 
-<div id="outline-container-org161e64b" class="outline-3">
-<h3 id="org161e64b"><span class="section-number-3">2.2</span> Tukia-Vaisala theorem</h3>
+<div id="outline-container-orgb9f42ec" class="outline-3">
+<h3 id="orgb9f42ec"><span class="section-number-3">2.2</span> Tukia-Vaisala theorem</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li><b>metric arc</b> \(J\) : a metric space \(J\) homeomorphic to the unit interval \([0,1]\)</li>
@@ -348,8 +348,8 @@ An important question in geometric analysis is whether a given metric space is g
 </div>
 </div>
 
-<div id="outline-container-org99eea5d" class="outline-3">
-<h3 id="org99eea5d"><span class="section-number-3">2.3</span> Theorem 1.1</h3>
+<div id="outline-container-org40f1ea1" class="outline-3">
+<h3 id="org40f1ea1"><span class="section-number-3">2.3</span> Theorem 1.1</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 This paper study the quasisymmetric uniformization problem for metric tress. 
@@ -395,8 +395,8 @@ Every quasi-tree is quasisymmetrically equivalent to a geodesic tree.
 </div>
 </div>
 
-<div id="outline-container-orga50a19d" class="outline-3">
-<h3 id="orga50a19d"><span class="section-number-3">2.4</span> Theorem 1.2</h3>
+<div id="outline-container-org4fa0596" class="outline-3">
+<h3 id="org4fa0596"><span class="section-number-3">2.4</span> Theorem 1.2</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="question">
 <p>
@@ -423,8 +423,8 @@ The conformal dimension of a quasi-tree is 1.
 </div>
 </div>
 
-<div id="outline-container-org6cac3f5" class="outline-3">
-<h3 id="org6cac3f5"><span class="section-number-3">2.5</span> Organization</h3>
+<div id="outline-container-org4b2a4d9" class="outline-3">
+<h3 id="org4b2a4d9"><span class="section-number-3">2.5</span> Organization</h3>
 <div class="outline-text-3" id="text-2-5">
 <ul class="org-ul">
 <li>Section 2: review some basic topological facts about trees.</li>
@@ -439,8 +439,8 @@ The conformal dimension of a quasi-tree is 1.
 </div>
 </div>
 
-<div id="outline-container-org20f1b60" class="outline-3">
-<h3 id="org20f1b60"><span class="section-number-3">2.6</span> Notation</h3>
+<div id="outline-container-orgfb4f694" class="outline-3">
+<h3 id="orgfb4f694"><span class="section-number-3">2.6</span> Notation</h3>
 <div class="outline-text-3" id="text-2-6">
 <ul class="org-ul">
 <li>\(a \asymp b\): there is a constant \(C \geq 1\) s.t. \(C^{-1} a \leq b \leq C a\).</li>
@@ -461,12 +461,12 @@ For \(A, B \subset X\)
 </div>
 </div>
 
-<div id="outline-container-orge9248f4" class="outline-3">
-<h3 id="orge9248f4"><span class="section-number-3">2.7</span> Something about Quasisymmetry</h3>
+<div id="outline-container-org972d43f" class="outline-3">
+<h3 id="org972d43f"><span class="section-number-3">2.7</span> Something about Quasisymmetry</h3>
 <div class="outline-text-3" id="text-2-7">
 </div>
-<div id="outline-container-orgedacee1" class="outline-4">
-<h4 id="orgedacee1"><span class="section-number-4">2.7.1</span> Quasisymmetric map and quasiconformal map</h4>
+<div id="outline-container-orgc49429f" class="outline-4">
+<h4 id="orgc49429f"><span class="section-number-4">2.7.1</span> Quasisymmetric map and quasiconformal map</h4>
 <div class="outline-text-4" id="text-2-7-1">
 <ul class="org-ul">
 <li>If \(f\) is quasisymmetric, then it is quasiconformal.</li>
@@ -482,8 +482,8 @@ For \(A, B \subset X\)
 </p>
 </div>
 </div>
-<div id="outline-container-orgea0af35" class="outline-4">
-<h4 id="orgea0af35"><span class="section-number-4">2.7.2</span> Quasicircle curve and Jordan curve</h4>
+<div id="outline-container-org69e50d1" class="outline-4">
+<h4 id="org69e50d1"><span class="section-number-4">2.7.2</span> Quasicircle curve and Jordan curve</h4>
 <div class="outline-text-4" id="text-2-7-2">
 <p>
 A Jordan curve cuts a sphere into two John domains iff it is quasicircle. 
@@ -497,8 +497,8 @@ A Jordan curve cuts a sphere into two John domains iff it is quasicircle.
 </div>
 </div>
 </div>
-<div id="outline-container-org9192427" class="outline-2">
-<h2 id="org9192427"><span class="section-number-2">3</span> Auxiliary facts</h2>
+<div id="outline-container-orgb660283" class="outline-2">
+<h2 id="orgb660283"><span class="section-number-2">3</span> Auxiliary facts</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>\(S \subset X\) is <b>\(s\) separated</b> for some \(s>0\) if \(d(x,y) > s\) for all \(x, y \in S\).</li>
@@ -645,20 +645,24 @@ So \(x_i\) and \(x_j\) are in the same component containing \(N\). However they 
 <li>If \(p\) has at least three branches, then \(p\) is called a <b>branch point</b> of \(T\) and the diameter of the third largest branch is denoted by \(H_T (p) := \text{diam} (B_3)\).</li>
 </ul>
 
+<div class="lemma">
 <p>
-<b>Lemma 2.3.</b> (A criterion how to detect branch points)
+(A criterion how to detect branch points)
 A tree \((T,d)\) and \(b, x_1, x_2, x_3 \in T\). 
 Arcs \([x_i, b)\) are pairwise disjoint. 
 Then \(x_i\) lie in different components of \(T \setminus \{b\}\) and \(b\) is a branch point of \(T\). 
 </p>
+
+</div>
 
 <ul class="org-ul">
 <li>A tree \((T, d)\) is \(K\) bounded turning with \(K \geq 1\) iff \(\text{diam} [x,y] \leq K d(x,y)\). (Take \([x, y]\) as the compact set in the definition. )</li>
 <li>The <b>diameter distance</b> on \(T\) is defined as \(\text{dd} (x,y) := \text{diam} [x,y]\).</li>
 </ul>
 
+<div class="lemma">
 <p>
-<b>Lemma 2.4.</b> (Properties of \(dd\))
+(Properties of \(dd\))
 </p>
 <ol class="org-ol">
 <li>\(dd\) is a metric on \(T\).</li>
@@ -666,6 +670,8 @@ Then \(x_i\) lie in different components of \(T \setminus \{b\}\) and \(b\) is a
 <li>\((T, dd)\) is of \(1\) bounded turning.</li>
 <li>\((T, d)\) is \(K\) boundaed turning iff \(id_T: (T,d) \to (T, dd)\) is \(K\) bi-Lipschitz.</li>
 </ol>
+
+</div>
 
 <div class="proof">
 <p>
@@ -689,7 +695,7 @@ dd(x, z)
 <i>Proof of 2).</i>
 </p>
 <ol class="org-ol">
-<li>\(\geq\): Since \(dd \geq d\), we have \(\text{diam}_dd \geq \text{diam}\).</li>
+<li>\(\geq\): Since \(dd \geq d\), we have \(\text{diam}_{dd} \geq \text{diam}\).</li>
 <li>\(\leq\): for any \(x,y \in J\), we have \([x, y] \subset J\). Then \(dd(x,y) = \text{diam} [x,y] \leq \text{diam} J\). Then \(\text{diam}_{dd} (J) = \sup_{x,y \in J} dd(x,y) \leq \text{diam} J\).</li>
 </ol>
 
@@ -729,8 +735,8 @@ Suppose \((T, d)\) is quasi-tree. Then Lemma 2.4 implies that \((T, dd)\) is bi-
 </div>
 </div>
 
-<div id="outline-container-org1012f2d" class="outline-2">
-<h2 id="org1012f2d"><span class="section-number-2">4</span> Sun and shadow</h2>
+<div id="outline-container-orgde7cfe9" class="outline-2">
+<h2 id="orgde7cfe9"><span class="section-number-2">4</span> Sun and shadow</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 In this section we will prove the following proposition, which allow us to find double points in \(T\) that stay away from the branch points of \(T\) in a geometrically controlled manner. 
@@ -796,7 +802,7 @@ If we think of each point \(p \in J\) with \(S(p) > 0\) as "casting a shadow" of
 <p>
 <i>Proof.</i> 
 WLOG, assume that \(\text{diam} J = 1\). 
-Let \(\lambda := /frac{1}{6M}\) and 
+Let \(\lambda := \frac{1}{6M}\) and 
 \[ A_n := \{ p \in A : S(p) \geq \lambda^n \}. \]
 Then \(A := \cup_n A_n\) is all points in \(J\) with \(S(p) > 0\). 
 </p>
@@ -836,7 +842,7 @@ We close this section by proving Proposition 4.1.
 
 <div class="proof">
 <p>
-<i>Proof of Proposition 3.2</i>
+<i>Proof of Proposition 3.1.</i> 
 </p>
 
 <p>
@@ -945,7 +951,7 @@ Indeed, \(x\) is not a branch point since \(d(x,b) > 0\) for all branch \(b\).
 <p>
 Here is the proof of the claim in the proof Proposition 3.1: 
 There exists \(M = M(N)\) s.t. 
-\[ \# \{ p \in I : S(p) \geq \text{diam} I \} \geq M. \] 
+\[ \# \{ p \in I : S(p) \geq \text{diam} I \} \leq M. \] 
 </p>
 
 <div class="proof">
@@ -993,8 +999,8 @@ d(q_r, q_{r'})
 </div>
 </div>
 </div>
-<div id="outline-container-org5a2ac20" class="outline-2">
-<h2 id="org5a2ac20"><span class="section-number-2">5</span> Good double points</h2>
+<div id="outline-container-orge95d047" class="outline-2">
+<h2 id="orge95d047"><span class="section-number-2">5</span> Good double points</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 In this section we introduce the concept of a "good" double point of \(T\). 
@@ -1224,8 +1230,8 @@ It contradicts the maximality of \(V\)
 </div>
 </div>
 
-<div id="outline-container-orgdeb3521" class="outline-2">
-<h2 id="orgdeb3521"><span class="section-number-2">6</span> Subdividing the tree</h2>
+<div id="outline-container-org92b4532" class="outline-2">
+<h2 id="org92b4532"><span class="section-number-2">6</span> Subdividing the tree</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 We want to subdivide our quasi-tree \(T\). 
@@ -1233,8 +1239,8 @@ As before, assume that \(T\) is equipped with a diameter metric \(d\) and \(\tex
 Fix \(\beta \geq 1\) and \(\gamma > 0\) depending on doubling constant \(N\) of \(T\) and a small constant \(0 < \delta < 1/(3 \beta)\). 
 </p>
 </div>
-<div id="outline-container-org86a9cf2" class="outline-3">
-<h3 id="org86a9cf2"><span class="section-number-3">6.1</span> Vertices and tiles</h3>
+<div id="outline-container-org93b7eb6" class="outline-3">
+<h3 id="org93b7eb6"><span class="section-number-3">6.1</span> Vertices and tiles</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 We will inductively construct set \(V^n \subset T\) s.t. 
@@ -1248,14 +1254,24 @@ where each \(V^n\) is a maximal \(\delta^n\) separated set consisting of \((\bet
 Each set \(V^n\) is finite since \(T\) is compact. 
 </p>
 
+<p>
+We construct \(V^n\) inductively. 
+Take \(V^1\) as a maximal \(\delta\) separated subset consisting of \((\beta, \gamma)\) good double points at scale \(\delta\). 
+Note that \(V^1 \neq \emptyset\) as \(\delta < 1/(3 \beta)\) and the remark after Proposition 4.2. 
+Assume that \(V^1 \subset ... \subset V^n\) have been constructed. 
+It is easy to check that \(V^n\) is also a \(\delta^{n+1}\) separated subset which consists of \((\beta, \gamma)\) good double points at scale \(\delta^{n+1}\). 
+So there exists a maximal such set containing \(V^n\), which is called \(V^{n+1}\). 
+</p>
+
 <ul class="org-ul">
 <li>Each point \(v \in V^n\) is called <b>\(n\) vertex</b>.</li>
 <li>The closure of a component of \(T \setminus V^n\) is called an <b>\(n\) tile</b>.</li>
 <li>\(X^n\) : the set of \(n\) tiles.</li>
 </ul>
 
+<div class="lemma">
 <p>
-<b>Lemma 5.1</b> (topological properties of vertices and tiles)
+(topological properties of vertices and tiles)
 </p>
 <ol class="org-ol">
 <li>Each \(n\) tile \(X\) is a subtree of \(T\) with \(\partial X \subset V^n\).</li>
@@ -1270,54 +1286,87 @@ Each set \(V^n\) is finite since \(T\) is compact.
 <li>If \(X \in X^n\) and \(\partial X = \{v\} \subset V^n\) is a singleton set, then \(X = \bar{W}\) where \(W\) is a component of \(T \setminus \{v\}\).</li>
 </ol>
 
+</div>
+
 <p>
-Here are some metric properties of vertices and tiles. 
-For \(X \in X^n\), we have 
+<b>Lemma</b> 
+(metric properties of vertices and tiles) 
 </p>
-<ul class="org-ul">
-<li>\(V^n\) consists of \(\delta^n\) separated points that is</li>
-</ul>
+
+<p>
+i) For \(X^n \in \mathbf{X}^n\), we have 
+</p>
+\begin{equation}
+\text{diam} X^n \asymp \delta^n. 
+\tag{5.3}
+\end{equation}
+
+<p>
+ii) \(\mathbf{X}^n\) is separated, that is, if \(X^n, Y^n \in \mathbf{X}^n\) are disjoint, then
+</p>
+\begin{equation}
+\text{dist} (X^n, Y^n) \geq \delta^n. 
+\tag{5.4}
+\end{equation}
+
+<p>
+iii) Both components of \(D_T (v)\) are large, that is, 
+</p>
+\begin{equation}
+D_T (v) \geq \beta \delta^n. 
+\tag{5.5}
+\end{equation}
+
+<p>
+iv) Each \(n\) vertex stays away from branch points, that is, for all branch point \(b\), 
+</p>
+\begin{equation}
+d(v,b) \geq \gamma \min \{ H_T(b), \delta^n \}. 
+\tag{5.6}
+\end{equation}
+
+<div class="proof">
+<p>
+<i>Proof of i).</i> 
+\(V^n\) consists of \(\delta^n\) separated points that is 
+</p>
 \begin{equation}
   d( u, v) \geq \delta^n
   \tag{5.2}
 \end{equation}
 <p>
 for all \(u, v \in V^n\).  
+Proposition 4.2 implies that
 </p>
-<ul class="org-ul">
-<li>\(\delta^n\) separated and Proposition 4.2 implies that</li>
-</ul>
-\begin{equation}
-  \delta^n \leq \text{diam} (X) \leq 3 \beta \delta^n. 
-  \tag{5.3}
-\end{equation}
-<ul class="org-ul">
-<li>We have good separation of \(n\) tiles in the following sense. If \(X^n, Y^n \in \mathbf{X}^n\) are disjoint \(n\) tiles, then</li>
-</ul>
-\begin{equation}
-  \text{dist} (X^n, Y^n) \geq \delta^n. 
-  \tag{5.4}
-\end{equation}
-<ul class="org-ul">
-<li>The component of \(T \setminus \{v\}\) are large in the following sense:</li>
-</ul>
-\begin{equation}
-  D_T (v) \geq \beta \delta^n
-  \tag{5.5}
-\end{equation}
+\begin{equation*}
+  \text{diam} (X) \leq 3 \beta \delta^n. 
+\end{equation*}
+
 <p>
-since each \(v \in V^n\) is a \((\beta, \gamma)\) good double point at scale \(\delta^n\). 
+<i>Proof of ii).</i> 
+Pick \(x \in X^n\) and \(y \in Y^n\) s.t. \(d(x, y) = \text{dist} (X^n, Y^n)\). 
+As travelling from \(x\) to \(y\), let \(u\) and \(v\) be the first points meeting \(\partial X\) and \(\partial Y\) respectively. 
+Since both \(\partial X\) and \(\partial Y\) are \(n\) vertices, 
 </p>
-<ul class="org-ul">
-<li>Each \(n\) vertex \(v\) stays away from the branch points of \(T\) in a controlled way:</li>
-</ul>
-\begin{equation}
-  d(v, b) \geq \gamma \min \{ H_T (b), \delta^n \}
-  \tag{5.6}
-\end{equation}
+\begin{align*}
+\text{dist} (x,y)
+&= d(x,y)
+=\text{diam} [x,y]
+\geq d(u,v) \\
+&\geq \delta^n \quad \text{($n$ vertices are $\delta^n$ separated)}
+\end{align*}
+
 <p>
-since (4.2) for each banch point. 
+<i>Proof of iii).</i> 
+Since \(v\) is \((\beta, \gamma)\) good double point, we have \(D_T (v) \geq \beta \delta^n\). 
 </p>
+
+<p>
+<i>Proof of iv).</i> 
+Again \(v\) is \((\beta, \gamma)\) good double point. 
+</p>
+
+</div>
 
 <p>
 For convenience, set \(V^0 := \emptyset\) and \(X^0 := T\). 
@@ -1325,8 +1374,8 @@ For convenience, set \(V^0 := \emptyset\) and \(X^0 := T\).
 </div>
 </div>
 
-<div id="outline-container-org1df45ec" class="outline-3">
-<h3 id="org1df45ec"><span class="section-number-3">6.2</span> Chains</h3>
+<div id="outline-container-orgc5a4769" class="outline-3">
+<h3 id="orgc5a4769"><span class="section-number-3">6.2</span> Chains</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li><b>\(n\) chain</b> is a sequence \(P\) of \(n\) tiles \(X_1, ..., X_r\) with \(X_i \cap X_{i+1} \neq \emptyset\). And \(r\) is called the <b>length</b> of \(P\).</li>
@@ -1338,22 +1387,31 @@ For convenience, set \(V^0 := \emptyset\) and \(X^0 := T\).
 <li>\(Q\) is a <b>subchain</b> of \(P\): \(Q\) is obtained by deleting some tiles in \(P\) while keeping the order of the remaining tiles.</li>
 </ul>
 
-<p>
-<b>Lemma 5.2</b>
-</p>
+<div class="lemma">
 <ol class="org-ol">
 <li>There exists a unique simple \(n\) chain \(P\) joining \(x\) and \(y\)</li>
 <li>If both \(P\) and \(P'\) joins \(x\) and \(y\) and \(P\) is simple, then \(|P| \subset |P'|\).</li>
 </ol>
 
+</div>
+
+<p>
+<i>Proof of lemma 5.2.</i> 
+Ommited. 
+</p>
+
 <p>
 By 2) of Lemma 5.2, we denote by \(P_{xy}^n\) the unique simple \(n\) chain joining \(x\) and \(y\). 
 </p>
 
+<div class="lemma">
 <p>
-<b>Lemma 5.3</b> (construct simple \((n+1)\) chains from simple \(n\) chain)
+(construct simple \((n+1)\) chains from simple \(n\) chain)
+</p>
+
+<p>
 Let \(P = (X_1, ..., X_r)\) be a simple \(n\) chain joining \(x\) and \(y\). 
-Let \(v_i\) be the unique vertex in \(X_{i-1} \cap X_i\), \(x_0 =  x\) and \(x_r = y\). 
+Let \(v_i\) be the unique vertex in \(X_{i-1} \cap X_i\), \(v_0 =  x\) and \(v_r = y\). 
 Denote by \(P_i'\) the simple \((n+1)\) chain joining \(v_{i-1}\) and \(v_i\). 
 The followings are true:
 </p>
@@ -1361,18 +1419,26 @@ The followings are true:
 <li>\(P_i'\) consists of \(X' \in \mathbf{X}^{(n+1)}\) with \(X' \cap [v_{i-1}, v_i] \neq \emptyset\).</li>
 <li>The simple \((n+1)\) chain \(P'\) joining \(x\) and \(y\) is obtained by concatenating \(P_1', ..., P_r'\).</li>
 </ol>
+
+</div>
+
+<p>
+<i>Proof of Lemma 5.3.</i> 
+Ommited. 
+</p>
 </div>
 </div>
 
-<div id="outline-container-org4542efb" class="outline-3">
-<h3 id="org4542efb"><span class="section-number-3">6.3</span> Choosing \(\delta\)</h3>
+<div id="outline-container-orga319df0" class="outline-3">
+<h3 id="orga319df0"><span class="section-number-3">6.3</span> Choosing \(\delta\)</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
-We now choose the parameter \(0 < \delta < 1/(3\beta)\) used in the definition of vertices and tiles so that \((n+1)\) tiles are contained in \(n\) tiles in a "controlled way". 
+We now choose the parameter \(0 < \delta < 1/(3\beta)\) used in the definition of vertices to make \(V \neq \emptyset\) and tiles so that \((n+1)\) tiles are contained in \(n\) tiles in a "controlled way". 
 </p>
 
+<div class="lemma">
 <p>
-<b>Lemma 5.4</b> (number of \((n+1)\) tiles)
+(number of \((n+1)\) tiles)
 If \(0 < \delta < 1/(3 \beta)\) only depending on \(N\), then the following hold for all \(n\):
 </p>
 <ol class="org-ol">
@@ -1380,17 +1446,22 @@ If \(0 < \delta < 1/(3 \beta)\) only depending on \(N\), then the following hold
 <li>If \(n\) vertices \(u \neq v\), then the simple \((n+1)\) chain joining \(u\) and \(v\) has length \(\geq 3\).</li>
 </ol>
 
+</div>
+
 <p>
 The first statement implies that there are at least three \(1\) tiles. 
 The second statement implies each \((n+1)\) tile \(X'\) contains at most one \(n\) vertex. 
 </p>
 
+<div class="lemma">
 <p>
-<b>Lemma 5.5</b> (location of \((n+1)\) vertices)
+(location of \((n+1)\) vertices)
 Let \(\delta\) in Lemma 5.4. 
 Let \(X\) be an \(n\) tile, \(u \in \partial X \subset V^n\) and \(X' \subset X\) be the unique \((n+1)\) tile containing \(u\). 
 Then there exists an \((n+1)\) vertex \(u' \in \partial X' \setminus \{u\}\) s.t. \([u, u'] \subset [u, v]\) for all \(v \in \partial X \setminus \{u\}\). 
 </p>
+
+</div>
 
 <p>
 For the rest of the paper, we fix \(0 < \delta < 1/ (3 \beta)\) s.t. Lemma 5.4 and Lemma 5.5 are true. 
@@ -1399,27 +1470,32 @@ Then \(\delta\) depends only on \(N\).
 The sets of vertices \(V^n\) and tiles \(X^n\) are fixed from now on since they depend on \(\delta\). 
 </p>
 
+<div class="lemma">
 <p>
-<b>Lemma 5.6</b>
 Let \(X\) be an \(n\) tile and \(u \neq v \in \partial X \subset V^n\). 
 Then the simple \((n+1)\) chain \(P_{uv}^{(n+1)}\) joining \(u\) to \(v\) consists precisely of all \((n+1)\) tiles \(X' \subset X\) with \(X' \cap [u, v] \neq \emptyset\). 
 Moreover, \(P_{uv}^{(n+1)}\) does not contain any point \(w \in \partial X\) distinct from \(u\) and \(v\). 
 </p>
 
+</div>
+
+<div class="lemma">
 <p>
-<b>Lemma 5.7</b> (uniform control for the local combinatorics of tiles)
+(uniform control for the local combinatorics of tiles)
 There is a constant \(K \in \mathbb{N}\) s.t. the following statements hold for each \(X \in \mathbf{X}^n\):
 </p>
 <ol class="org-ol">
 <li>There are at most \(K\) \(n\) tiles that intersect \(X\).</li>
 <li>There are at most \(K\) \((n+1)\) tiles contained in \(X\).</li>
 </ol>
+
+</div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2c737cc" class="outline-2">
-<h2 id="org2c737cc"><span class="section-number-2">7</span> Weights and main vertices of tiles</h2>
+<div id="outline-container-org1ebcf1e" class="outline-2">
+<h2 id="org1ebcf1e"><span class="section-number-2">7</span> Weights and main vertices of tiles</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 We will now define <i>weight</i> of tiles. 
@@ -1435,8 +1511,8 @@ Later they will be used to construct our desired geodesic metric \(\varrho\).
 </div>
 </div>
 
-<div id="outline-container-org533b6b7" class="outline-2">
-<h2 id="org533b6b7"><span class="section-number-2">8</span> Construction of the geodesic metric</h2>
+<div id="outline-container-org596f847" class="outline-2">
+<h2 id="org596f847"><span class="section-number-2">8</span> Construction of the geodesic metric</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Based on weights defined in the previous section, we define a new metric \(\varrho\) on \((T, d)\). 
@@ -1444,8 +1520,8 @@ Based on weights defined in the previous section, we define a new metric \(\varr
 </div>
 </div>
 
-<div id="outline-container-org463c8a4" class="outline-2">
-<h2 id="org463c8a4"><span class="section-number-2">9</span> Quasisymmetry</h2>
+<div id="outline-container-org8fd90db" class="outline-2">
+<h2 id="org8fd90db"><span class="section-number-2">9</span> Quasisymmetry</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 In this section, we prove Theorem 1.1 by showing that \(( T, d)\) is quasisymmetrically equivalent to \((T, \varrho)\). 
@@ -1453,8 +1529,8 @@ In this section, we prove Theorem 1.1 by showing that \(( T, d)\) is quasisymmet
 </div>
 </div>
 
-<div id="outline-container-org4d9bb7f" class="outline-2">
-<h2 id="org4d9bb7f"><span class="section-number-2">10</span> Lowering the Hausdorff dimension</h2>
+<div id="outline-container-org3e9451e" class="outline-2">
+<h2 id="org3e9451e"><span class="section-number-2">10</span> Lowering the Hausdorff dimension</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 In this section we will prove Theorem 1.2. 
@@ -1462,8 +1538,8 @@ In this section we will prove Theorem 1.2.
 </div>
 </div>
 
-<div id="outline-container-org7823b54" class="outline-2">
-<h2 id="org7823b54"><span class="section-number-2">11</span> Remarks and open problems</h2>
+<div id="outline-container-orgb0e600f" class="outline-2">
+<h2 id="orgb0e600f"><span class="section-number-2">11</span> Remarks and open problems</h2>
 <div class="outline-text-2" id="text-11">
 <div class="question">
 <p>
@@ -1493,7 +1569,7 @@ How about quasi-graphs?
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Bonk, Mario; Meyer, Daniel</p>
-<p class="date">Created: 2019-03-09 Sat 20:00</p>
+<p class="date">Created: 2019-03-11 Mon 19:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
